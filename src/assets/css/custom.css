@@ -1,0 +1,3165 @@
+.space {
+	margin-right: -15px;
+	margin-left: -15px;
+	margin-top: 20px;
+}
+
+.aui .portlet-borderless-container {
+	background: transparent;
+}
+
+.aui form {
+	margin: 0;
+}
+
+.aui h1, .aui h2, .aui h3, .aui h4, .aui h5, .aui h6 {
+	color: #8D8D8D;
+	font-family: "Conv_ITCFranklinGothicStd-MdCd";
+}
+
+.aui ul {
+	margin: 0;
+}
+
+.af-md-12 {
+	width: 100%;
+	float: left;
+}
+
+.af-md-11 {
+	width: 91.66666667%;
+	float: left;
+}
+
+.af-md-10 {
+	width: 83.33333334%;
+	float: left;
+}
+
+.af-md-9 {
+	width: 75%;
+	float: left;
+}
+
+.af-md-8 {
+	width: 66.66666667%;
+	float: left;
+}
+
+.af-md-6 {
+	width: 50%;
+	float: left;
+}
+
+.af-md-5 {
+	width: 41.66666667%;
+	float: left;
+}
+
+.af-md-4 {
+	width: 33.33333333%;
+	float: left;
+}
+
+.af-md-3 {
+	width: 25%;
+	float: left;
+}
+
+.af-md-2 {
+	width: 16.66666667%;
+	float: left;
+}
+
+.af-md-1 {
+	width: 8.33333333%;
+	float: left;
+	min-height: 1px;
+}
+
+.axa-color {
+	color: #103184;
+}
+
+.axa-screening-tile {
+	color: #103184;
+	margin-left: 37%;
+	float: left;
+	position: relative;
+	font-size: 23px;
+}
+
+.axa-color-light {
+	color: #0062A9;
+}
+
+.axa-color-black {
+	color: #000;
+}
+
+.axa-light {
+	font-family: "ITCFranklinGothicCondensedBook";
+}
+
+.axa-middle {
+	font-family: "Conv_ITCFranklinGothicStd-MdCd";
+}
+
+.axa-bold {
+	font-family: "ITCFranklinGothicCondensedDemi";
+}
+
+.axa-font-size-lg {
+	font-size: 20px;
+}
+
+.axa-font-size-xs {
+	font-size: 12px;
+}
+
+.axa-uppercase {
+	text-transform: uppercase;
+}
+
+.axa-margin-horizontal {
+	margin: 10px 0;
+}
+
+.axa-margin-top {
+	margin-top: 10px;
+}
+
+.axa-margin-bottom {
+	margin-bottom: 10px;
+}
+
+.axa-no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.axa-margin-left {
+	margin-left: 15px;
+}
+
+.axa-padding-left {
+	padding-left: 15px;
+}
+
+.axa-text-align-center {
+	text-align: center;
+}
+
+.axa-text-align-right {
+	text-align: right;
+}
+
+.axa-font-bold {
+	font-weight: bold;
+}
+
+.axa-position-relative {
+	position: relative;
+}
+
+.axa-position-absolute {
+	position: absolute;
+}
+
+.axa-border-1-gray {
+	border: 1px solid #efefef;
+}
+
+.axa-border-bottom-gray {
+	border-bottom: 1px solid #efefef;
+}
+
+.axa_facil_header {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.axa-facil-contanier {
+	max-width: 95%;
+	padding: 1.1em 0;
+	padding-left: 0px !important;
+	height: auto;
+	overflow: visible;
+	margin: 0 auto !important;
+	position: relative;
+	font-family: "Conv_ITCFranklinGothicStd-MdCd";
+}
+
+.axa-facil-contanier-nopad {
+	max-width: 95%;
+	padding: 0;
+	height: auto;
+	overflow: visible;
+	margin: 0 auto !important;
+	position: relative;
+}
+
+.axa_facil_division {
+	width: 100%;
+	margin: 0 auto;
+	border-bottom: 5px solid #103184;
+}
+
+.axa_container_division {
+	margin: 3em 0 1em 0;
+	border-bottom: 5px solid #103184;
+}
+
+.axa-facil-float-right {
+	float: right;
+}
+
+.axa-facil-no-padding {
+	padding: 0;
+}
+
+.axa-facil-no-padding-vertical {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.axa-facil-no-padding-top {
+	padding-top: 0;
+}
+
+.axa-facil-no-padding-bottom {
+	padding-bottom: 0;
+}
+
+.af-min-padding-vertical {
+	padding: 2px 0;
+}
+
+.af-no-margin {
+	margin: 0;
+}
+
+.af-hidden {
+	visibility: hidden;
+}
+
+#axa-facil-profile {
+	float: right;
+	position: relative;
+}
+
+#axa-facil-profile-mobile {
+	float: right;
+}
+
+#axa-facil-profile-picture {
+	margin-left: 15px;
+	position: relative;
+}
+
+#axa-facil-profile-img {
+	width: 35px;
+	height: 35px;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	border: 2px solid #E5E5E5;
+}
+
+#af-profile-link {
+	color: #0062a9;
+	text-decoration: underline !important;
+	cursor: pointer;
+	display: block;
+}
+
+#af-profile-link:hover {
+	cursor: pointer;
+}
+
+#af-alert-service {
+	position: absolute;
+	text-align: center;
+	font-size: 10px;
+	line-height: 18px;
+	color: #fff;
+	background: #F00;
+	width: 20px;
+	height: 20px;
+	right: -8px;
+	top: -8px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+}
+
+.af-profile-tel {
+	margin-top: 8px;
+	height: 27px;
+	position: relative;
+}
+
+.af-profile-mail {
+	height: 25px;
+	position: relative;
+}
+
+.af-window-container {
+	position: absolute;
+	background: transparent;
+	right: 0;
+	top: 100%;
+	width: auto;
+	height: auto;
+	min-height: 10px;
+	z-index: 10000;
+}
+
+.af-window-triangle-up {
+	position: absolute;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #b0b0b0 transparent;
+}
+
+.af-window-body {
+	background: #fff;
+	margin-top: 5px;
+	padding: 0.5em 1em;
+	border: 1px solid #b0b0b0;
+	-webkit-box-shadow: 0px 0px 1px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 0px 1px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 0px 1px 0px rgba(50, 50, 50, 0.75);
+}
+
+.af-window-body .af-window-profile-data {
+	background: #f3f3f3;
+	padding: 1em;
+	font-size: 16px;
+}
+
+#af-window-tel {
+	display: none;
+}
+
+#af-window-tel .af-window-body {
+	background: #f3f3f3;
+}
+
+#af-window-profile {
+	display: none;
+}
+
+#af-window-profile .af-window-triangle-up {
+	right: 12px;
+}
+
+#af-window-profile .af-window-body {
+	padding: 0;
+	width: 304px;
+}
+
+#af-profile-picture {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	text-align: center;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	border: 2px solid #808080;
+}
+
+.af-window-profile-notification {
+	padding: 1em;
+}
+
+#af-logout {
+	cursor: pointer;
+	padding: 0.5em;
+	background: #fff;
+	margin: 0.5em 0;
+}
+
+#af-logout a {
+	color: #0062a9;
+	display: block;
+}
+
+#af-logout:hover {
+	background: #0062a9;
+}
+
+#af-logout:hover a, #af-logout:hover a:hover {
+	color: #fff;
+}
+
+#af-profile-divider {
+	border-left: 1px solid #103184;
+	min-width: 1px;
+	height: 35px;
+	margin-left: 15px;
+}
+
+.af-profile-divider {
+	width: 100%;
+	margin: 0 auto;
+	border-bottom: 2px solid #103184;
+}
+
+.af-alert-vigencia-cedula {
+	padding: 5px 10px;
+	margin: 5px 0;
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+.af-alert-vigencia-cedula:hover {
+	background: #0062a9;
+}
+
+.af-alert-vigencia-cedula:hover>div {
+	color: white !important;
+}
+
+.af-alert-vigencia-cedula:hover .af-alert-vc-icon {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_calendar_on.png");
+}
+
+.af-alert-vigencia-cedula .af-alert-vc-icon {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_calendar_off.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+	float: left;
+}
+
+.af-alert-font-color-dark {
+	color: #000;
+}
+
+.af-alert-font-color-light {
+	color: #b0b0b0;
+}
+
+.af-alert-font-size-medium {
+	font-size: 15px;
+}
+
+.af-alert-division {
+	width: calc(100% - 20px);
+	margin: 0 auto;
+	height: 1px;
+	border-bottom: 1px solid #eee;
+	background-color: #fff;
+}
+
+.axa-facil-full-contanier {
+	width: 100%;
+	min-height: 1px;
+}
+
+.axa-facil-contanier-custom {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0;
+	min-height: 1px;
+}
+
+.axa-facil-profile-container .axa-facil-float-right span {
+	margin-top: 5px;
+}
+
+.axa-facil-main-menu {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#axa-facil-login {
+	margin: 10px 0;
+	width: 41.66666667%;
+	height: 250px;
+	padding: 0 15px;
+	float: left;
+	background-color: rgba(11, 47, 116, 0.8);
+}
+
+#axa-facil-login #axa-facil-login-passwd a {
+	display: block;
+	color: #fff;
+	text-align: right;
+	padding-bottom: 12px;
+	font-family: "Conv_ITCFranklinGothicStd-MdCd";
+}
+
+#axa-facil-login .control-group {
+	margin-bottom: 15px;
+}
+
+#axa-facil-registro {
+	margin: 10px 0;
+	width: 20%;
+	height: 250px;
+	padding: 0 15px;
+	float: left;
+	background-color: rgba(11, 47, 116, 0.3);
+}
+
+#axa-facil-registro p {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: "ITCFranklinGothicCondensedBook";
+	color: #fff;
+}
+
+#axa-facil-registro a {
+	width: calc(100% - 24px);
+	display: inline-block;
+	margin-bottom: 95px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #fff;
+	background-color: #0e2e86;
+	border: none;
+	background-image: none;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	font-family: "ITCFranklinGothicCondensedDemi";
+}
+
+#axa-slash {
+	height: 18px;
+	width: 11px;
+	background: url("/AXA-Facil-theme/images/axa/axa_slash.png");
+	display: inline-block;
+}
+
+/** Main Menu **/
+.axa-facil-main-menu .axa_mainMenu {
+	width: auto;
+}
+
+.axa-facil-main-menu .axa_mainMenu>li {
+	margin-right: 5px;
+	width: auto;
+}
+
+.axa-facil-main-menu li.iconoHome img.axa_imgHome {
+	width: 20px;
+}
+
+.axa-facil-main-menu .axa_dropdown .caret {
+	color: #3b3b3b;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: bottom;
+	border-top: 4px solid;
+	border-right: 4px solid rgba(0, 0, 0, 0);
+	border-left: 4px solid rgba(0, 0, 0, 0);
+	margin-top: 15px;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu {
+	display: none;
+	width: calc(100% - 20px);
+	padding: 20px 10px;
+	background: #FFF;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	color: #333;
+	height: auto;
+	left: 0;
+	top: calc(100% - 5px);
+	z-index: 9999;
+	position: absolute;
+	border-top: 5px solid #103184;
+	border-bottom: 5px solid #103184;
+}
+
+.axa-facil-main-menu li.axa_dropdown:hover {
+	border-bottom: 5px solid #103184;
+}
+
+.axa-facil-main-menu .axa_dropdown:hover>.axa_dropdown-submenu {
+	display: none;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li {
+	width: calc(50% - 21px);
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+	padding-left: 10px;
+	text-align: left;
+	vertical-align: top;
+	line-height: 1.8em;
+	text-transform: none;
+	border-right: 1px dotted #E5E5E5;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li>a.axa_dropdown-submenu-header
+	{
+	border-bottom: 1px dotted #E5E5E5;
+	color: #3b3b3b;
+	font-family: "ITCFranklinGothicCondensedDemi";
+	font-size: 16px;
+	margin-bottom: 10px;
+	display: block;
+	line-height: 1em;
+	padding-bottom: 10px;
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-size: 5px 16px;
+	margin-right: 20px;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li>a.axa_dropdown-submenu-header:hover
+	{
+	text-decoration: none !important;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li.axa_dropdown-no-bar
+	{
+	border: none;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li>ul.axa_dropdown-submenu-list>li
+	{
+	list-style: none !important;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li>ul.axa_dropdown-submenu-list>li>a
+	{
+	color: #3b3b3b;
+	display: block;
+	line-height: 20px;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li>ul.axa_dropdown-submenu-list>li>a:hover
+	{
+	color: #103184;
+}
+
+.axa-facil-main-menu .axa_dropdown>.axa_dropdown-submenu>li>ul.axa_dropdown-submenu-list>li>p
+	{
+	line-height: 1em;
+	font-size: 14px;
+	color: #b0b0b0;
+}
+
+.axa-facil-main-menu a {
+	font-size: 14px;
+}
+
+.axa-facil-main-menu .axa_dropdown-submenu.axa_custom_submenu {
+	padding: 0 10px !important;
+}
+
+.axa-facil-main-menu .axa_dropdown-submenu.axa_custom_submenu>li {
+	padding: 20px 10px;
+	margin: 0;
+}
+
+.axa-facil-main-menu .axa_dropdown-submenu.axa_custom_submenu>li>a.axa_dropdown-submenu-header
+	{
+	margin: 0;
+	padding: 0;
+	background: none;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+.axa-facil-main-menu .axa_dropdown-submenu.axa_custom_submenu>li>ul {
+	padding: 0;
+}
+
+.axa-facil-main-menu .axa_dropdown-submenu.axa_custom_submenu .axa_dropdown_icon_lob
+	{
+	width: 50px;
+	height: 50px;
+	float: left;
+	background: #efefef;
+	margin-right: 10px;
+}
+
+.axa-facil-main-menu .axa_payOnLine {
+	float: right;
+}
+
+.axa-facil-main-menu .axa_payOnLine .axa_payOnLineButton {
+	font-size: 16px;
+	background: #e10000 url("/AXA-Facil-theme/images/axa/arrow_white.png")
+		center right no-repeat;
+}
+
+.axa-facil-main-menu .axa_payOnLine .axa_payOnLineButton:hover {
+	background-color: #243980;
+}
+
+.axa-facil-main-menu .axa_mainMenu, .axa-facil-main-menu .axa_mainMenu li
+	{
+	-webkit-box-sizing: content-box !important;
+	-moz-box-sizing: content-box !important;
+	box-sizing: content-box !important;
+}
+
+#af_carousel ul {
+	height: 260px !important;
+	position: relative;
+}
+
+#af_carousel ul li {
+	float: left;
+	width: 25%;
+	height: 250px;
+	cursor: auto !important;
+}
+
+.axa-facil-boletin {
+	background: #fff;
+	width: 85%;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid #b0b0b0;
+	height: 250px;
+}
+
+.axa-facil-boletin h3.axa-facil-boletin-header {
+	color: #79838d;
+	font-family: "Conv_ITCFranklinGothicStd-MdCd";
+	font-size: 16px;
+	line-height: 20px;
+	color: #103184;
+	text-align: left;
+	width: 80%;
+	margin: 5px auto;
+}
+
+.axa-facil-boletin img.axa-facil-boletin-image {
+	float: none !important;
+	width: 100%;
+	height: 120px;
+}
+
+.axa-facil-boletin p.axa-facil-boletin-resumen {
+	color: #b0b0b0;
+	font-size: 12px;
+	line-height: 14px;
+	width: 80%;
+	margin: 5px auto 10px auto;
+}
+
+.axa-facil-boletin .axa-facil-boletin-button {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	background: #103184;
+	color: #fff;
+	font-size: 12px;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+.axa-facil-boletin .axa-facil-boletin-button.resume {
+	background: #6abc45;
+}
+
+.axa_quotes_container>.next {
+	left: initial;
+	right: 0;
+	background-image:
+		url("/AXA-Facil-theme/images/axa/boletines/btn_ade-gris.png");
+	background-size: 16px 21px;
+	width: 16px;
+	height: 21px;
+}
+
+.axa_quotes_container>.prev {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/boletines/btn_atras-gris.png");
+	background-size: 16px 21px;
+	width: 16px;
+	height: 21px;
+}
+
+.axa_quotes_container>.next, .axa_quotes_container>.prev {
+	z-index: 100;
+}
+
+#axa_quickLinks_block .axa_title_quickLinks {
+	line-height: 1em;
+	width: 150px;
+	margin-top: 1em;
+}
+
+#axa_quickLinks_block #axa_quickLinks {
+	width: calc(100% - 150px);
+}
+
+.axa_dropdown .caret {
+	color: #3b3b3b;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: bottom;
+	border-top: 4px solid;
+	border-right: 4px solid rgba(0, 0, 0, 0);
+	border-left: 4px solid rgba(0, 0, 0, 0);
+	margin-top: 15px;
+}
+
+.banner-block .box .color-box .title {
+	font-family: "ITCFranklinGothicCondensedDemi";
+	font-size: 3em;
+}
+
+.banner-block .box .color-box .title h1 {
+	color: #fff;
+}
+
+.banner-block .box .color-box p {
+	font-size: 1.5em;
+}
+
+/** Tabs Global **/
+.axa-facil-tabs-list-element {
+	width: 25%;
+}
+
+.axa-facil-tabs-list {
+	border-bottom: 5px solid #0062A9;
+}
+
+.axa-facil-tabs-list .axa-facil-tabs-list-element {
+	float: left;
+	margin-right: 5px;
+}
+
+.axa-facil-tabs-list .axa-facil-tabs-list-element a {
+	font-size: 22px;
+	font-family: Conv_ITCFranklinGothicStd-MdCd;
+	text-align: center;
+	padding: 0.5em 0;
+	color: #0062A9;
+	display: block;
+	background: #f5f5f5;
+	outline: 0;
+}
+
+.axa-facil-tabs-list .axa-facil-tabs-list-element a:hover,
+	.axa-facil-tabs-list .axa-facil-tabs-list-element a.active {
+	background-color: #0062A9;
+	color: #fff;
+}
+
+/** Tabs LoB **/
+.axa-facil-tabs-element-lob {
+	width: calc(25% - 0.2em);
+}
+
+.axa-facil-tabs-list-lob {
+	border-bottom: 2px solid #0062A9;
+}
+
+.axa-facil-tabs-list-lob .axa-facil-tabs-element-lob {
+	float: left;
+	margin-right: 5px;
+}
+
+.axa-facil-tabs-list-lob .axa-facil-tabs-element-lob a {
+	font-size: 22px;
+	font-family: Conv_ITCFranklinGothicStd-MdCd;
+	text-align: center;
+	padding: 0.5em 0;
+	color: #0062A9;
+	display: block;
+	background: #f5f5f5;
+	width: 100%;
+	outline: 0;
+}
+
+.axa-facil-tabs-list-lob .axa-facil-tabs-element-lob a:hover,
+	.axa-facil-tabs-list-lob .axa-facil-tabs-element-lob a.active {
+	background-color: #0062A9;
+	color: #fff;
+}
+
+/** Footer**/
+.axa_links_list {
+	width: auto;
+}
+
+.axa_links_list li a:hover {
+	color: #0e2e85;
+	text-decoration: underline !important;
+}
+
+.axa_footer_column_img {
+	float: left;
+	margin-right: 0.5em;
+}
+
+#axa_footer_column_title_hidden {
+	width: 1px;
+	height: 20px;
+	margin-bottom: .83em;
+}
+
+/** Content **/
+.axa-facil-content-back.gray {
+	background: #f5f5f5;
+}
+
+.axa-facil-content-back.white {
+	background: #fff;
+}
+
+.af_banner_content {
+	font-size: 20px;
+	padding: 40px 0;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image:
+		url("/AXA-Facil-theme/images/axa/bg-banner-default.png");
+}
+
+.af_banner_content h1 {
+	color: #fff;
+	position: relative;
+}
+
+.af_banner_content p {
+	position: relative;
+}
+
+.af_banner_bg_color {
+	background: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+.axa-facil-content-generic .axa-facil-tabs-list {
+	border-bottom: 5px solid #0062A9;
+}
+
+.axa-facil-content-generic .axa-facil-tabs-list .axa-facil-tabs-list-element
+	{
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.axa-facil-content-generic .axa-facil-tabs-list .axa-facil-tabs-list-element a
+	{
+	font-size: 22px;
+	font-family: Conv_ITCFranklinGothicStd-MdCd;
+	text-align: center;
+	padding: 0.5em 0;
+	color: #0062A9;
+	display: block;
+	background: #f5f5f5;
+	outline: 0;
+}
+
+.axa-facil-content-generic .axa-facil-tabs-list .axa-facil-tabs-list-element.ui-state-active a,
+	.axa-facil-content-generic .axa-facil-tabs-list .axa-facil-tabs-list-element.ui-state-hover a
+	{
+	background: #0062A9;
+	color: #fff;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .axa-facil-content-seccion
+	{
+	font-size: 22px;
+	font-family: Conv_ITCFranklinGothicStd-MdCd;
+	color: #fff;
+	background: #0062A9;
+	padding: 0.5em 2em;
+	margin-bottom: 10px;
+	outline: 0;
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	background-size: 28px 17px;
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/puce_header_accordion_open.png");
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .axa-facil-content-seccion.ui-state-active
+	{
+	margin: 0;
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/puce_header_accordion_close.png");
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content
+	{
+	font-family: ITCFranklinGothicCondensedBook;
+	background: #fff;
+	padding: 1em 2em;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #0062A9;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h1,
+	.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h2,
+	.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h3,
+	.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h4,
+	.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h5,
+	.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h6
+	{
+	color: #000;
+	font-family: Conv_ITCFranklinGothicStd-MdCd;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h2
+	{
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h3
+	{
+	font-size: 23px;
+	line-height: 28px;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h4
+	{
+	font-size: 22px;
+	line-height: 26px;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h5
+	{
+	font-size: 21px;
+	line-height: 25px;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content h6
+	{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content b
+	{
+	color: #000;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content a
+	{
+	color: #0062A9;
+	text-decoration: underline !important;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content ul li
+	{
+	padding-left: 1.5em;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .ui-accordion-content .af-cotizador-list .af-cotizador-item
+	{
+	padding: 1em 0 1em 0;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .axa-facil-documents.ui-accordion-content
+	{
+	padding: 1em 0;
+}
+
+.axa-facil-content-generic .axa-facil-documents .axa-facil-documents-controls
+	{
+	height: 40px;
+	text-align: right;
+}
+
+.axa-facil-content-generic .axa-facil-documents .axa-facil-documents-controls div
+	{
+	margin-left: 10px;
+}
+
+.axa-facil-content-generic .axa-facil-documents .axa-facil-content-seccion
+	{
+	font-size: 22px;
+	font-family: Conv_ITCFranklinGothicStd-MdCd;
+	color: #fff;
+	background: #0062A9;
+	padding: 0.5em 2em;
+	margin-bottom: 10px;
+	outline: 0;
+}
+
+.af-icon {
+	width: 25px;
+	height: 25px;
+	margin: 0 auto;
+	padding: 6px 0;
+}
+
+.af-icon.af-icon-pc {
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_pc.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.af-icon.af-icon-ios {
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_ios.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.af-icon.af-icon-android {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_android.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.af-icon.af-icon-info {
+	display: inline-block;
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_info.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.af-icon.af-icon-link {
+	display: inline-block;
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_link.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.af-icon.af-icon-download {
+	display: inline-block;
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_download.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.af-mini-window-container {
+	position: relative;
+}
+
+.af-mini-window-container .af-mini-window-content {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -235px;
+	width: 250px;
+	min-height: 100px;
+	height: auto;
+	background: #fff;
+	border: 1px solid #f5f5f5;
+	z-index: 1;
+}
+
+.af-mini-window-container .af-mini-window-content.active {
+	display: block;
+}
+
+.af-mini-window-container .af-mini-window-content .af-mini-window-header
+	{
+	font-weight: bold;
+	padding: 0.5em;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.af-mini-window-container .af-mini-window-content .af-mini-window-txt {
+	padding: 0.5em;
+	text-align: left;
+}
+
+.af-mini-window-container .af-mini-window-content .af-mini-window-txt .af-mini-window-txt-link a.af-mini-window-a
+	{
+	display: block;
+	color: #8D8D8D;
+	text-align: center;
+	text-decoration: none !important;
+}
+
+.axa-facil-content-generic .axa-facil-content-accordion .axa-facil-documents.ui-accordion-content
+	{
+	background: #f5f5f5;
+	border: none;
+}
+
+.af-content-sub-seccion {
+	font-size: 22px;
+	font-family: Conv_ITCFranklinGothicStd-MdCd;
+	color: #0062A9;
+	background: #f5f5f5;
+	padding: 0.5em 2em;
+	margin-bottom: 10px;
+	outline: 0;
+}
+
+.axa-facil-content-generic .af-content-sub-accordion .af-content-sub-content.ui-accordion-content
+	{
+	background: #f5f5f5;
+	padding: 0;
+	border: none;
+}
+
+.axa-facil-documents-grid .af-document-element {
+	width: calc(25% - 20px);
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.axa-facil-documents-grid .af-document {
+	overflow: hidden;
+	height: 272px;
+	background-color: #fff;
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb {
+	position: relative;
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-img
+	{
+	background-image: url("/AXA-Facil-theme/images/axa/home/document2.png");
+	background-position: center;
+	background-size: 45%;
+	background-color: #ccc;
+	background-repeat: no-repeat;
+	height: 150px;
+	width: 100%;
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-img.custom-back
+	{
+	background-position: center;
+	background-size: cover;
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-back
+	{
+	position: absolute;
+	height: 150px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.7);
+	top: 0;
+	left: 0;
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon
+	{
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	top: 10px;
+	left: 10px;
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.pdf
+	{
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_pdf.png");
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.pptx,
+	.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.ppt
+	{
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_powerpoint.png");
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.xlsx,
+	.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.xls,
+	.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.xlsm
+	{
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_excel.png");
+}
+
+.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.docx,
+	.axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.doc
+	{
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_word.png");
+}
+
+.axa-facil-documents-grid .af-document .af-document-abstract {
+	background: #FFF;
+	padding: 15px;
+}
+
+.axa-facil-documents-grid .af-document .af-document-abstract .af-document-title
+	{
+	color: #000;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.axa-facil-documents-grid .af-document .af-document-abstract .af-document-resume
+	{
+	font-family: ITCFranklinGothicCondensedBook;
+	font-size: 14px;
+}
+
+.axa-facil-documents-grid .af-document .af-document-abstract .af-document-link
+	{
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+.axa-facil-documents-grid .af-document .af-document-abstract .af-document-link a
+	{
+	color: #0062A9;
+	text-decoration: underline !important;
+	cursor: pointer;
+}
+
+.axa-facil-documents-list .af-document-element {
+	background: #fff;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.axa-facil-documents-list .af-document {
+	width: 100%;
+}
+
+.axa-facil-documents-list .af-document .af-document-thumb {
+	width: 16.66666667%;
+	float: left;
+}
+
+.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon
+	{
+	height: 40px;
+	width: 40px;
+	margin: 10px auto;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url("/AXA-Facil-theme/images/axa/home/document2.png");
+}
+
+.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.pdf
+	{
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_pdf.png");
+}
+
+.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.pptx,
+	.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.ppt
+	{
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_powerpoint.png");
+}
+
+.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.xlsx,
+	.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.xls,
+	.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.xlsm
+	{
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_excel.png");
+}
+
+.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.docx,
+	.axa-facil-documents-list .af-document .af-document-thumb .af-document-icon.doc
+	{
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_word.png");
+}
+
+.axa-facil-documents-list .af-document .af-document-abstract {
+	width: 83.33333334%;
+	height: 60px;
+	float: left;
+}
+
+.axa-facil-documents-list .af-document .af-document-abstract .af-document-title
+	{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.axa-facil-documents-list .af-document .af-document-abstract .af-document-link
+	{
+	display: none;
+}
+
+.axa-facil-documents-list .af-document .list_clear {
+	clear: both;
+}
+
+.af-documents-grid {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background-size: 100%;
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/grid_view_gris.png");
+}
+
+.af-documents-grid.active {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/grid_view_azul.png");
+}
+
+.af-documents-list {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background-size: 100%;
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/list_view_gris.png");
+}
+
+.af-documents-list.active {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/list_view_azul.png");
+}
+
+.af_custom_division {
+	width: 100%;
+	border-bottom: 1px dotted #808080;
+	margin: 10px 0;
+}
+
+/* MODAL */
+.af_quickLinks_admin {
+	display: none;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+}
+
+.af_quickLinks_admin.active {
+	display: block;
+}
+
+.af_quickLinks_admin_container {
+	max-width: 960px;
+	margin: 5% auto;
+	background: #fff;
+}
+
+.af_quickLinks_admin_header {
+	position: relative;
+	background: #0062a9;
+	color: #fff;
+	padding: 0.5em 0;
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	line-height: 24px;
+	font-family: "ITCFranklinGothicCondensedBook";
+}
+
+.af_quickLinks_admin_close {
+	position: absolute;
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+	top: 5px;
+	right: 5px;
+	z-index: 250;
+}
+
+.af_quickLinks_block {
+	margin-bottom: 20px;
+}
+
+.af_quickLinks_block fieldset {
+	padding: 0.5em;
+}
+
+.af_quickLinks_block fieldset .ui-datalist.ui-widget::after {
+	clear: both;
+}
+
+.af_quickLinks_block fieldset .ui-fieldset-content {
+	border: 1px dotted #8D8D8D;
+	height: 127px;
+}
+
+.af_quickLinks_block fieldset .ui-fieldset-content .ui-outputpanel.ui-widget
+	{
+	background-color: #5c91c0;
+}
+
+.af_quickLinks_block fieldset .ui-fieldset-content .ui-datalist-item:hover
+	{
+	background: #86B2D9;
+}
+
+.af_quickLinks_block fieldset ul.ui-datalist-data {
+	background: #5c91c0;
+	height: 100%;
+}
+
+.af_quickLinks_block fieldset ul.ui-datalist-data .ui-datalist-item {
+	width: 16.66%;
+}
+
+.af_quickLinks_grid fieldset {
+	padding: 0.5em;
+}
+
+.af_quickLinks_grid .ui-datalist-item {
+	width: calc(14.28% - 12px);
+	border: 1px solid #f5f5f5;
+	margin: 0 10px 10px 0;
+}
+
+.af_quickLinks_grid .ui-datalist-item:hover {
+	background: #efefef;
+}
+
+ul.ui-datalist-data .ui-datalist-item {
+	width: calc(16.66% - 12px);
+	height: 127px;
+	float: left;
+	cursor: move;
+}
+
+.af_admin_item_ql {
+	text-align: center;
+	padding: 0;
+	height: 127px;
+}
+
+.af_admin_item_ql img {
+	display: block;
+	margin: 0.5em auto 1em auto;
+	width: 40px;
+}
+
+.af_admin_item_ql span {
+	line-height: 16px;
+}
+
+.af_custom_item_ql {
+	color: #fff;
+	text-align: center;
+	padding: 0;
+	height: 127px;
+}
+
+.af_custom_item_ql img {
+	display: block;
+	margin: 0.5em auto 1em auto;
+	width: 40px;
+}
+
+.af_custom_item_ql .af_fixed_item_ql_title {
+	line-height: 16px;
+}
+
+.af_fixed_item_ql_msg {
+	display: block;
+	padding: 53px 0;
+	font-style: italic;
+	font-size: 17px;
+	text-align: center;
+}
+
+/* BTN */
+input:focus {
+	outline: none;
+}
+
+.aui input[type="submit"] {
+	margin: 0;
+}
+
+.af_btn_container {
+	padding: 0.5em;
+}
+
+.af_btn, a.af_btn, input.af_btn {
+	display: block;
+	padding: 1em 2em;
+	font-size: 20px;
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+.aui input[type="text"].af-input-disabled {
+	background-color: #e5e5e5;
+	padding: 4px 15px;
+}
+
+input[type="text"].af-input-custom-width {
+	width: 98% !important;
+}
+
+input.af-expires-css {
+	background: #fed5ce !important;
+	color: black !important;
+}
+
+input.af-alert-css {
+	background: #fee450 !important;
+	color: black !important;
+}
+
+.af-custom-label {
+	color: #8D8D8D;
+	font-style: italic;
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+.af_icon_generic {
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 46px;
+	margin: 0 auto;
+}
+
+.af_icon_generic.af-standar-css {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_calendar_standar.png");
+	background-position: center center;
+	background-size: 100%;
+	max-width: 35px;
+}
+
+.af_icon_generic.af-alert-css {
+	background-image: url("/AXA-Facil-theme/images/axa/home/icon_alert.png");
+	background-position: center center;
+	background-size: 100%;
+	max-width: 35px;
+}
+
+.af_icon_generic.af-expires-css {
+	background-image:
+		url("/AXA-Facil-theme/images/axa/home/icon_expired.png");
+	background-position: center center;
+	background-size: 100%;
+	max-width: 35px;
+}
+
+.af_btn_succes, a.af_btn_succes, input.af_btn_success {
+	background: #7a9f34;
+	display: block;
+	padding: 1.1em 2em;
+	color: #fff;
+}
+
+a.af_btn_succes:hover {
+	color: #fff;
+}
+
+input.af_btn.af_btn_success {
+	float: right;
+	background: #7a9f35;
+	border: none;
+	color: #fff;
+	padding: 0.5em 2em;
+	outline: none;
+}
+
+input.af_btn {
+	float: right;
+	border: none;
+	color: #fff;
+	padding: 0.5em 2em;
+	outline: none;
+}
+
+input.af_btn.af_btn_success {
+	background: #7a9f35;
+}
+
+input.af_btn.ql_btn_cancel {
+	margin-right: 20px;
+	background-color: #949495;
+	border-color: #949495;
+	float: left;
+}
+
+input.af_btn.ql_btn_success {
+	margin-bottom: 10px;
+}
+
+.ui-slider-horizontal {
+	height: 5px;
+	background: #e5e5e5;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	top: -10px;
+	margin-left: -.6em;
+}
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+	background: #a3cae0;
+}
+
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	cursor: default;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	background: #1762a5;
+}
+
+.ui-slider .ui-slider-handle.ui-state-default {
+	outline: none;
+	font-weight: bold;
+	color: #4f4f4f;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+.ui-slider .ui-slider-handle:hover {
+	background: #1762a5;
+}
+
+.ui-slider .ui-slider-handle .ui-slider-time {
+	position: absolute;
+	top: 110%;
+	color: #1762a5;
+	font-size: 12px;
+}
+
+input[type=text].af-wg-placeholder::-webkit-input-placeholder {
+	font-family: ITCFranklinGothicCondensedBook;
+	color: #3b3b3b;
+}
+
+input[type=text].af-wg-placeholder::-moz-placeholder {
+	font-family: ITCFranklinGothicCondensedBook;
+	color: #3b3b3b;
+}
+
+input[type=text]:-moz-placeholder {
+	font-family: ITCFranklinGothicCondensedBook;
+	color: #3b3b3b;
+}
+
+input[type=text]:-ms-input-placeholder {
+	font-family: ITCFranklinGothicCondensedBook;
+	color: #3b3b3b;
+}
+
+.af-tou-btn-container .btn.btn-primary.af-tou-btn-success {
+	color: #FFF;
+	font-family: ITCFranklinGothicCondensedBook;
+	font-size: 18px;
+	background-color: #7a9f35;
+	border-color: #7a9f35;
+	background-image: none;
+	padding: 6px 40px;
+	text-align: center;
+	min-width: auto;
+	outline: none;
+}
+
+.af-tou-btn-container .btn.af-tou-btn-gray {
+	color: #FFF;
+	font-family: ITCFranklinGothicCondensedBook;
+	font-size: 18px;
+	background-color: #949495;
+	border-color: #949495;
+	background-image: none;
+	padding: 6px 40px;
+	text-align: center;
+	min-width: auto;
+	outline: none;
+}
+
+/** Protlets **/
+.portlet-login .navigation {
+	display: none;
+}
+
+.portlet-login .control-group {
+	margin-bottom: 15px;
+}
+
+.portlet-login .control-group label {
+	color: #fff;
+	margin-bottom: 0;
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+.portlet-login .control-group:first-child {
+	padding-top: 12px;
+}
+
+.portlet-login .control-group.form-inline {
+	display: none;
+}
+
+.portlet-login input[type="text"], .portlet-login input[type="password"]
+	{
+	box-sizing: inherit;
+	display: block;
+	width: calc(100% - 24px);
+	height: 20px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	margin: 0;
+	border: none;
+}
+
+.portlet-login input[type="text"] {
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+.portlet-login .button-holder {
+	margin: 0;
+	padding-top: 10px;
+}
+
+.portlet-login button.btn.btn-primary[type="submit"] {
+	color: #fff;
+	background-image: none;
+	background-color: #fe1212;
+	border: none;
+	padding: 10px 70px;
+	font-family: "ITCFranklinGothicCondensedDemi";
+	font-size: 22px;
+	line-height: 1.33;
+	width: 100%;
+}
+
+#portlet_terms-of-use header.portlet-topper {
+	display: none;
+}
+
+#portlet_terms-of-use .portlet-content {
+	border: none;
+}
+
+#axa-facil-login .control-group {
+	margin-bottom: 8px;
+	padding-top: 12px;
+}
+
+#axa-facil-login label.control-label {
+	display: block;
+	color: #fff;
+	margin-bottom: 0;
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+#axa-facil-login input.field {
+	box-sizing: content-box;
+	display: block;
+	width: calc(100% - 24px);
+	height: 20px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	margin: 0;
+	border: none;
+	outline: none;
+}
+
+#axa-facil-login input[type="text"].field {
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+#axa-facil-login input[type="submit"].btn {
+	width: 100%;
+	color: #FFF;
+	background-color: #dc0101;
+	border: none;
+	padding: 10px 70px;
+	margin-top: 20px;
+	font-family: "ITCFranklinGothicCondensedDemi";
+	font-size: 22px;
+	line-height: 1.33;
+	outline: none;
+}
+
+#axa-facil-forgot-pwd {
+	text-align: right;
+	display: block;
+	color: #fff;
+	font-family: ITCFranklinGothicCondensedBook;
+}
+
+#axa-facil-registro p {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: "ITCFranklinGothicCondensedBook";
+	color: #fff;
+}
+
+#axa-facil-registro a {
+	width: calc(100% - 24px);
+	display: inline-block;
+	margin-bottom: 95px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #fff;
+	background-color: #0e2e86;
+	border: none;
+	background-image: none;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	font-family: "ITCFranklinGothicCondensedDemi";
+}
+
+.portlet-nested-portlets .portlet-layout .portlet-boundary {
+	border: 1px solid #D3D3D3;
+}
+
+header.portlet-topper.af_widget_header {
+	background: #0062A9;
+	padding: 0.5em;
+	color: #fff;
+	font-family: "Conv_ITCFranklinGothicStd-MdCd";
+}
+
+.aui .modal.fade.in {
+	top: 0;
+}
+
+.modal.fade.af-modal {
+	z-index: -1;
+}
+
+.modal.fade.af-modal.in {
+	margin-top: 0;
+	z-index: 2000;
+}
+
+.af-modal {
+	margin-top: 30%;
+	width: 100%;
+}
+
+.af-modal img.af-modal-img {
+	width: 12%;
+}
+
+.af-modal .af-modal-txt {
+	padding: 2em;
+}
+
+.af-custom-detail p {
+	margin-bottom: 0 !important;
+	font-size: 18px;
+	font-family: 'ITCFranklinGothicCondensedBook';
+}
+
+.af-custom-detail p span.af-custom-detail-text {
+	font-family: 'ITCFranklinGothicCondensedDemi';
+	word-break: break-all;
+}
+
+.af-custom-detail p span.af-custom-detail-text-reverse {
+	color: #F07662;
+}
+
+.af-custom-detail p span.af-custom-detail-text-min {
+	font-size: 16px;
+}
+
+@media ( min-width : 980px) {
+	.axa_mainMenu {
+		display: block !important;
+	}
+}
+
+@media ( max-width : 979px) and (min-width: 720px) {
+	.portlet-dockbar .navbar .navbar-inner .container>a.btn.btn-navbar:first-child
+		{
+		display: none;
+	}
+	.axa_facil_container {
+		width: 95%;
+	}
+	.axa-facil-contanier.af_full_container {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 !important;
+	}
+	.af-sm-12 {
+		width: 100%;
+		float: left;
+	}
+	.af-sm-11 {
+		width: 91.66666667%;
+		float: left;
+	}
+	.af-sm-10 {
+		width: 83.33333334%;
+		float: left;
+	}
+	.af-sm-8 {
+		width: 66.66666667%;
+		float: left;
+	}
+	.af-sm-6 {
+		width: 50%;
+		float: left;
+	}
+	.af-sm-5 {
+		width: 41.66666667%;
+		float: left;
+	}
+	.af-sm-4 {
+		width: 33.33333333%;
+		float: left;
+	}
+	.af-sm-3 {
+		width: 25%;
+		float: left;
+	}
+	.af-sm-2 {
+		width: 16.66666667%;
+		float: left;
+	}
+	.af-sm-1 {
+		width: 8.33333333%;
+		float: left;
+		min-height: 1px;
+	}
+	#axa_logo {
+		margin-left: 1em;
+	}
+	#axa-facil-profile {
+		margin-right: 1em;
+	}
+	#axa-facil-profile-mobile {
+		width: 55px;
+		margin-top: 0.2em;
+	}
+	#af-window-profile .af-window-triangle-up {
+		right: 25px;
+	}
+	#af-alert-service {
+		right: -5px;
+		top: -5px;
+	}
+	#axa-facil-login {
+		width: 50%;
+	}
+	#axa-facil-registro {
+		width: 25%;
+	}
+	#axa-facil-registro p {
+		padding-bottom: 30px;
+		padding-top: 60px;
+	}
+	#axa-facil-profile-img {
+		width: 60px;
+		height: 60px;
+	}
+	.af-profile-tel {
+		margin-top: 12px;
+	}
+	.af-profile-mail {
+		margin: 17px 20px;
+	}
+
+	/* Main Menu */
+	#navigationBar_container {
+		position: relative;
+		width: 100%;
+		padding: 0;
+		z-index: 100;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu {
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li {
+		margin-right: 0;
+		width: auto;
+		line-height: 2em;
+		background:
+			url("/AXA-Facil-theme/images/axa/bg_main-menu-mobile_li.png") right
+			center no-repeat;
+		border-left: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li a {
+		color: #3b3b3b;
+		text-transform: uppercase;
+		width: 90%;
+		text-align: left;
+		margin: 0 auto;
+		padding: 0;
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li a.iconH {
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li span.caret
+		{
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu li.axa_dropdown:hover {
+		border-bottom: 1px solid #efefef;
+		background: #103184;
+	}
+	#navigationBar_container .axa-facil-main-menu li.axa_dropdown:hover>a {
+		color: #fff;
+	}
+	#navigationBar_container .axa-facil-main-menu ul.axa_dropdown-submenu>li
+		{
+		width: 100% !important;
+	}
+	#navigationBar_container .axa-facil-main-menu ul.axa_dropdown-submenu>li ul
+		{
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu
+		{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		border: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li
+		{
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		border-right: none;
+		border-bottom: 1px solid #efefef;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li a
+		{
+		background: none;
+		border: none;
+		font-family: "Conv_ITCFranklinGothicStd-MdCd";
+		text-transform: capitalize;
+		margin-left: 40px;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list
+		{
+		padding: 0;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list li
+		{
+		background: #efefef;
+		margin-bottom: 1px;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list li a
+		{
+		color: #666;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list p
+		{
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list.active
+		{
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown .axa_dropdown-submenu.axa_custom_submenu
+		{
+		padding: 0 !important;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown .axa_dropdown-submenu.axa_custom_submenu .axa_dropdown_icon_lob
+		{
+		width: 40px;
+		height: 40px;
+		margin-left: 40px;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active {
+		background: #103184;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active a {
+		color: #fff;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active .axa_dropdown-submenu.active
+		{
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active .axa_dropdown-submenu.active a
+		{
+		color: #3b3b3b;
+		text-transform: inherit;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active ul.axa_dropdown-submenu-list.active
+		{
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu a {
+		line-height: 2.5em !important;
+		text-decoration: none !important;
+	}
+	.axa_payOnLine {
+		display: none;
+	}
+	#blt_banner .banner-block {
+		height: 17.3em;
+	}
+	#axa_quickLinks_block .axa_title_quickLinks {
+		width: 130px;
+		text-align: center;
+	}
+	#axa_quickLinks_block #axa_quickLinks {
+		width: calc(100% - 130px);
+	}
+	.axa_footer_column_title {
+		margin: 0.5em auto;
+		line-height: 2em;
+		border-bottom: 1px dotted #0e2e85;
+	}
+	.axa_links_list li {
+		background: none;
+		padding: 0;
+		margin: 0;
+	}
+	.axa_links_list li a {
+		padding-left: 0.5em;
+		width: calc(90% - 0.5em);
+		background-size: auto 14px;
+		background-position: left center;
+		margin: 0 auto;
+		display: block;
+		line-height: 2em;
+	}
+	.axa_footer_margin {
+		width: 90%;
+		margin: 0 auto;
+		float: none;
+	}
+	.axa-facil-boletin {
+		width: 95%;
+	}
+
+	/** Content **/
+	.axa-facil-content-generic .axa-facil-content-accordion .axa-facil-content-seccion
+		{
+		background-size: 21px 12px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile
+		{
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content
+		{
+		background: transparent;
+		padding: 0;
+		margin: 15px auto;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-content-seccion-mobile
+		{
+		background: #0062A9;
+		color: #fff;
+		font-size: 18px;
+		font-family: Conv_ITCFranklinGothicStd-MdCd;
+		padding: 0.5em 1em;
+		margin-top: 15px;
+		outline: none;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-content-accordion-mobile
+		{
+		background: #fff;
+		padding: 1em;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document-element
+		{
+		width: calc(50% - 10px);
+		float: left;
+		margin: 0 20px 20px 0;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document
+		{
+		overflow: hidden;
+		height: 272px;
+		background-color: #fff;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb
+		{
+		position: relative;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-img
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/document2.png");
+		background-position: center;
+		background-size: 35%;
+		background-color: #ccc;
+		background-repeat: no-repeat;
+		height: 150px;
+		width: 100%;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-img.custom-back
+		{
+		background-position: center;
+		background-size: cover;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-back
+		{
+		position: absolute;
+		height: 150px;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.7);
+		top: 0;
+		left: 0;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon
+		{
+		background-position: center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		top: 10px;
+		left: 10px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.pdf
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/icon_pdf.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.pptx,
+		.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.ppt
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/icon_powerpoint.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.xlsx,
+		.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.xls
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/icon_excel.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.docx,
+		.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.doc
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/icon_word.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract
+		{
+		background: #FFF;
+		padding: 15px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-title
+		{
+		color: #000;
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-resume
+		{
+		font-family: ITCFranklinGothicCondensedBook;
+		font-size: 14px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-link
+		{
+		font-family: ITCFranklinGothicCondensedBook;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-link a
+		{
+		color: #0062A9;
+		text-decoration: underline !important;
+		cursor: pointer;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-title-seccion-mobile.axa-facil-content-seccion
+		{
+		background: #E5E5E5;
+		color: #0062A9;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-title-seccion-mobile.axa-facil-content-seccion.ui-state-active
+		{
+		background: #0062A9;
+		color: #fff;
+	}
+	.axa-facil-documents-grid .af-document-element {
+		width: calc(50% - 20px);
+	}
+
+	/** Tabs **/
+	.axa-facil-tabs-list {
+		border: none;
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element {
+		float: none;
+		margin: 0 0 5px 0;
+		width: 100%;
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element a {
+		text-align: left;
+		padding-left: 1em;
+		background-repeat: no-repeat;
+		background-position: 95% center;
+		background-size: 28px 17px;
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/accordion_blue_open.png");
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element a.active,
+		.axa-facil-tabs-list .axa-facil-tabs-list-element a.active:hover {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/puce_header_accordion_close.png");
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element a:hover {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/puce_header_accordion_open.png");
+	}
+
+	/** Tabs LoB **/
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob {
+		width: 25%;
+		margin: 0;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a {
+		background: #fff;
+		padding: 5px 0;
+		color: #9f9f9f;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-auto,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-auto
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_auto_on.png");
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-gmm,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-gmm
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_gmm_on.png");
+		background-size: 50% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-vida,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-vida
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_vida_on.png");
+		background-size: 75% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-danos,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-danos
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_danos_on.png");
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-icon {
+		width: 35px;
+		height: 35px;
+		margin: 5px auto;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-auto {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_auto_off.png");
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-gmm {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_gmm_off.png");
+		background-size: 50% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-vida {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_vida_off.png");
+		background-size: 75% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-danos {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_danos_off.png");
+	}
+	.ui-slider .ui-slider-handle {
+		width: 20px;
+		height: 20px;
+	}
+	.ui-slider-horizontal .ui-slider-handle {
+		top: -7px;
+	}
+	#axa_footer {
+		max-width: 100%;
+	}
+	.axa_quotes_container>.next {
+		left: 100%;
+	}
+	.axa_quotes_container>.prev {
+		right: 100%;
+		left: auto;
+	}
+}
+
+@media ( max-width : 772px) and (min-width: 300px) {
+	.axa-facil-boletin {
+		margin: 0px auto;
+		max-width: 300px;
+	}
+}
+
+@media ( max-width : 719px) and (min-width: 300px) {
+	.portlet-dockbar .navbar .navbar-inner .container>a.btn.btn-navbar:first-child
+		{
+		display: none;
+	}
+	#axa-facil-login {
+		width: calc(100% - 30px);
+	}
+	#axa-facil-registro {
+		display: none;
+	}
+	.af-xs-12 {
+		width: 100%;
+		float: left;
+	}
+	.af-xs-11 {
+		width: 91.66666667%;
+		float: left;
+	}
+	.af-xs-10 {
+		width: 83.33333334%;
+		float: left;
+	}
+	.af-xs-8 {
+		width: 66.66666667%;
+		float: left;
+	}
+	.af-xs-7 {
+		width: 58.33333334%;
+		float: left;
+	}
+	.af-xs-6 {
+		width: 50%;
+		float: left;
+	}
+	.af-xs-5 {
+		width: 41.66666667%;
+		float: left;
+	}
+	.af-xs-4 {
+		width: 33.33333333%;
+		float: left;
+	}
+	.af-xs-3 {
+		width: 25%;
+		float: left;
+	}
+	.af-xs-2 {
+		width: 16.66666667%;
+		float: left;
+	}
+	.af-xs-1 {
+		width: 8.33333333%;
+		float: left;
+		min-height: 1px;
+	}
+	#axa_logo {
+		margin-left: 0.5em;
+	}
+	#axa_logo img {
+		width: 16em;
+	}
+	#af-alert-service {
+		right: -5px;
+		top: -5px;
+	}
+	#af-window-profile .af-window-triangle-up {
+		right: 18px;
+	}
+	.axa-facil-contanier.af_full_container {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 !important;
+	}
+	#axa-facil-profile {
+		margin-right: 0;
+	}
+	#axa-facil-profile-picture {
+		margin-left: 15px;
+	}
+	#axa-facil-profile-img {
+		width: 45px;
+		height: 45px;
+	}
+	img#iconMainMenu {
+		width: 45px;
+	}
+	.af-profile-tel {
+		margin-top: 8px;
+		width: 15px;
+	}
+	.af-profile-mail {
+		margin: 12px 15px;
+		width: 30px;
+	}
+	.axa-facil-boletin {
+		margin: 0px auto;
+		width: 60%;
+		max-width: 300px;
+	}
+	#blt_banner .banner-block {
+		height: 17.25em;
+	}
+	#axa_quickLinks_block .axa_title_quickLinks {
+		line-height: 1em;
+		padding-top: 1em;
+		margin: 0 auto 1em auto;
+		width: 90%;
+		text-align: left;
+	}
+	#axa_quickLinks_block #axa_quickLinks {
+		width: 90%;
+		margin: 0 auto;
+	}
+	#axa_quickLinks_block #axa_quickLinks ul {
+		height: auto;
+		padding-bottom: 2em;
+	}
+	.af_quickLinks_admin_container {
+		width: 95%;
+	}
+	.af_quickLinks_block fieldset, .af_quickLinks_grid fieldset {
+		padding: 0;
+	}
+	.af_custom_item_ql {
+		border: 1px solid #8db2d3;
+	}
+	ul.ui-datalist-data .ui-datalist-item {
+		width: 33.33%;
+	}
+	.af_quickLinks_grid ul.ui-datalist-data .ui-datalist-item {
+		width: calc(100% - 2px);
+		margin: 5px 0;
+		height: auto;
+	}
+	.af_quickLinks_grid ul.ui-datalist-data .ui-datalist-item .af_admin_item_ql
+		{
+		height: auto;
+	}
+	.af_quickLinks_grid ul.ui-datalist-data .ui-datalist-item .af_admin_item_ql img
+		{
+		display: none;
+	}
+	input.af_btn.af_btn_success {
+		float: none;
+		width: 100%;
+	}
+
+	/* Main Menu */
+	#navigationBar_container {
+		position: relative;
+		width: 100%;
+		padding: 0;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu {
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li {
+		margin-right: 0;
+		width: auto;
+		line-height: 2em;
+		background:
+			url("/AXA-Facil-theme/images/axa/bg_main-menu-mobile_li.png") right
+			center no-repeat;
+		border-left: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li a {
+		color: #3b3b3b;
+		text-transform: uppercase;
+		width: 90%;
+		text-align: left;
+		margin: 0 auto;
+		padding: 0;
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li a.iconH {
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_mainMenu>li span.caret
+		{
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu li.axa_dropdown:hover {
+		border-bottom: 1px solid #efefef;
+		background: #103184;
+	}
+	#navigationBar_container .axa-facil-main-menu li.axa_dropdown:hover>a {
+		color: #fff;
+	}
+	#navigationBar_container .axa-facil-main-menu ul.axa_dropdown-submenu>li
+		{
+		width: 100% !important;
+	}
+	#navigationBar_container .axa-facil-main-menu ul.axa_dropdown-submenu>li ul
+		{
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu
+		{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		border: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li
+		{
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		border-right: none;
+		border-bottom: 1px solid #efefef;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li a
+		{
+		background: none;
+		border: none;
+		font-family: "Conv_ITCFranklinGothicStd-MdCd";
+		text-transform: capitalize;
+		margin-left: 40px;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list
+		{
+		padding: 0;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list li
+		{
+		background: #efefef;
+		margin-bottom: 1px;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list li a
+		{
+		color: #666;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list p
+		{
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown ul.axa_dropdown-submenu li ul.axa_dropdown-submenu-list.active
+		{
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown .axa_dropdown-submenu.axa_custom_submenu
+		{
+		padding: 0 !important;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown .axa_dropdown-submenu.axa_custom_submenu .axa_dropdown_icon_lob
+		{
+		width: 40px;
+		height: 40px;
+		margin-left: 40px;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active {
+		background: #103184;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active a {
+		color: #fff;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active .axa_dropdown-submenu.active
+		{
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active .axa_dropdown-submenu.active a
+		{
+		color: #3b3b3b;
+		text-transform: inherit;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active .axa_dropdown-submenu.active ul.axa_dropdown-submenu-list.active
+		{
+		display: block;
+	}
+	#navigationBar_container .axa-facil-main-menu .axa_dropdown.active .axa_dropdown-submenu.axa_custom_submenu.active ul.axa_dropdown-submenu-list.active
+		{
+		display: none;
+	}
+	#navigationBar_container .axa-facil-main-menu a {
+		line-height: 2.5em !important;
+		text-decoration: none !important;
+	}
+	.axa_payOnLine {
+		display: none;
+	}
+	.axa_footer_column_title {
+		margin: 0.5em auto;
+		line-height: 2em;
+		border-bottom: 1px dotted #0e2e85;
+	}
+	.axa_links_list li {
+		background: none;
+		padding: 0;
+		margin: 0;
+	}
+	.axa_links_list li a {
+		padding-left: 0.5em;
+		width: calc(90% - 0.5em);
+		background-size: auto 14px;
+		background-position: left center;
+		margin: 0 auto;
+		display: block;
+		line-height: 2em;
+	}
+	.axa_footer_margin {
+		width: 90%;
+		margin: 0 auto;
+		float: none;
+	}
+
+	/** Content **/
+	.axa-facil-content-generic .axa-facil-content-accordion .axa-facil-content-seccion
+		{
+		background-size: 21px 12px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile
+		{
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content
+		{
+		background: transparent;
+		padding: 0;
+		margin: 15px auto;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-content-seccion-mobile
+		{
+		background: #0062A9;
+		color: #fff;
+		font-size: 18px;
+		font-family: Conv_ITCFranklinGothicStd-MdCd;
+		padding: 0.5em 1em;
+		margin-top: 15px;
+		outline: none;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-content-accordion-mobile
+		{
+		background: #fff;
+		padding: 1em;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document-element
+		{
+		width: 100%;
+		float: left;
+		margin: 0 0 20px 0;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document
+		{
+		overflow: hidden;
+		height: 272px;
+		background-color: #fff;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb
+		{
+		position: relative;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-img
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/document2.png");
+		background-position: center;
+		background-size: 20%;
+		background-color: #ccc;
+		background-repeat: no-repeat;
+		height: 150px;
+		width: 100%;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-img.custom-back
+		{
+		background-position: center;
+		background-size: cover;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-back
+		{
+		position: absolute;
+		height: 150px;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.7);
+		top: 0;
+		left: 0;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon
+		{
+		background-position: center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		top: 10px;
+		left: 10px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.pdf
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/icon_pdf.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.pptx,
+		.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.ppt
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/icon_powerpoint.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.xlsx,
+		.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.xls
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/icon_excel.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.docx,
+		.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-thumb .af-document-icon.doc
+		{
+		background-image: url("/AXA-Facil-theme/images/axa/home/icon_word.png");
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract
+		{
+		background: #FFF;
+		padding: 15px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-title
+		{
+		color: #000;
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-resume
+		{
+		font-family: ITCFranklinGothicCondensedBook;
+		font-size: 14px;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-link
+		{
+		font-family: ITCFranklinGothicCondensedBook;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-container-accordion-mobile.ui-accordion-content .axa-facil-documents-mobile .axa-facil-documents-grid .af-document .af-document-abstract .af-document-link a
+		{
+		color: #0062A9;
+		text-decoration: underline !important;
+		cursor: pointer;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-title-seccion-mobile.axa-facil-content-seccion
+		{
+		background: #E5E5E5;
+		color: #0062A9;
+	}
+	.axa-facil-content-accordion-mobile .axa-facil-title-seccion-mobile.axa-facil-content-seccion.ui-state-active
+		{
+		background: #0062A9;
+		color: #fff;
+	}
+	.axa-facil-content-generic .axa-facil-content-accordion .af-responsive-custom.ui-accordion-content
+		{
+		padding: 1em 0.5em;
+	}
+	.axa-facil-documents-grid .af-document-element {
+		width: 100%;
+	}
+	#axa_footer {
+		max-width: 100%;
+	}
+
+	/** Tabs **/
+	.axa-facil-tabs-list {
+		border: none;
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element {
+		float: none;
+		margin: 0 0 5px 0;
+		width: 100%;
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element a {
+		text-align: left;
+		padding-left: 1em;
+		background-repeat: no-repeat;
+		background-position: 95% center;
+		background-size: 28px 17px;
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/accordion_blue_open.png");
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element a.active,
+		.axa-facil-tabs-list .axa-facil-tabs-list-element a.active:hover {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/puce_header_accordion_close.png");
+	}
+	.axa-facil-tabs-list .axa-facil-tabs-list-element a:hover {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/puce_header_accordion_open.png");
+	}
+
+	/** Tabs LoB **/
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob {
+		width: 25%;
+		margin: 0;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a {
+		background: #fff;
+		padding: 5px 0;
+		font-size: 16px;
+		color: #9f9f9f;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-auto,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-auto
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_auto_on.png");
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-gmm,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-gmm
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_gmm_on.png");
+		background-size: 50% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-vida,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-vida
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_vida_on.png");
+		background-size: 75% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a:hover .lob-danos,
+		.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob a.active .lob-danos
+		{
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_danos_on.png");
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-icon {
+		width: 25px;
+		height: 25px;
+		margin: 5px auto;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-auto {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_auto_off.png");
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-gmm {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_gmm_off.png");
+		background-size: 50% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-vida {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_vida_off.png");
+		background-size: 75% 100%;
+	}
+	.axa-facil-tabs-list-lob li.axa-facil-tabs-element-lob .lob-danos {
+		background-image:
+			url("/AXA-Facil-theme/images/axa/home/lob/lob_icon_danos_off.png");
+	}
+	.ui-slider .ui-slider-handle {
+		width: 20px;
+		height: 20px;
+	}
+	.ui-slider-horizontal .ui-slider-handle {
+		top: -7px;
+	}
+}
+
+@media ( max-width : 479px) and (min-width: 300px) {
+	.af_admin_modal .af_admin_modal_header h3 {
+		font-size: 18px;
+	}
+	.af_btn, a.af_btn {
+		font-size: 18px;
+	}
+	#axa_logo {
+		margin: 0;
+	}
+	#axa_logo img {
+		width: 10em;
+	}
+	.af-profile-tel {
+		width: 10px;
+	}
+	.af-window-container {
+		right: 0;
+	}
+	#axa-facil-profile {
+		margin: 0;
+	}
+	#af-alert-service {
+		right: -3px;
+		top: -3px;
+		width: 15px;
+		height: 15px;
+		font-size: 8px;
+		line-height: 13px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+	}
+	#af-window-profile .af-window-triangle-up {
+		right: 13px;
+	}
+	#axa-facil-profile-picture {
+		margin-right: 0;
+	}
+	#axa-facil-profile-picture {
+		margin: 0;
+	}
+	#axa-facil-profile-img {
+		width: 35px;
+		height: 35px;
+	}
+	.af-profile-mail {
+		margin: 10px 0 10px 10px;
+		width: 20px;
+	}
+	img#iconMainMenu {
+		width: 35px;
+		margin: 0 10px;
+	}
+	.af-profile-tel {
+		margin-right: 5px;
+	}
+	.af_icon_generic {
+		width: 90%;
+		margin: 0 0 0 10%;
+	}
+	.axa_quotes_container>.next {
+		right: 10%;
+	}
+	.axa_quotes_container>.prev {
+		left: 10%;
+	}
+}
+
+@media ( max-width : 349px) and (min-width: 300px) {
+	img#iconMainMenu {
+		margin: 0;
+	}
+	.af-profile-tel {
+		margin-right: 0;
+	}
+}

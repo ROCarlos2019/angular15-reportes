@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Menu custom styles
+   ========================================================================== */
+
+.header-logo {
+    padding: 2px;
+}
+
+.header-menu {
+    background-color: #2E0084;
+    color: white!important; 
+}
+
+.navbar-light .navbar-brand ,.navbar-nav .nav-link.active, .nav-link  {
+    color: white!important; 
+}
+
+.navbar{
+    padding: 0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-brand {
+    padding-right: 10px;
+    border-right: white 1px solid;
+    font-size: 1rem!important;
+    font-weight: bold;
+}
+
+.dropdown-menu-header {
+    color: #fff!important;
+    background-color: #2E0084;
+}
+
+.dropdown-menu {
+    
+    color: #343a40!important;
+}
+
+.dropdown-item {
+    color: #fff!important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #fff!important;;
+    text-decoration: none;
+    background-color: #240069;
+}
+
+
+.icono img{
+    padding-top: 20px!important;
+    width: 25px!important;
+}
+
+body{
+    background-color: #efefef!important;
+    color: #333333;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+ }
+
+main {
+    /* min-height: calc (100% - 120px); */
+    display: block;
+    display: flex;
+    flex: 1;
+}
+
+header{
+background-color: white;
+}
+
+.white-container {
+    padding: 15px;
+    background-color: white;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px!important;      
+}
+
+.margin {
+    margin-bottom: 15px; 
+    margin-top: 15px;
+}
+
+.blue-container {
+    padding: 15px;
+    background-color: #2E0084;
+    position: relative;
+    display: block;
+    margin-top: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px!important;   
+    color:white;   
+}
+
+i {
+    padding-right: 7px;
+    padding-left: 15px;
+}
+
+button i {
+    padding-right: 7px;
+    padding-left: 2px;
+}
+
+
+.div-border {
+    border: 1px solid #BABABA;
+    margin-left:15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.div-table{
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.div-botones{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+.modalConfimacion {
+	background: white;
+	height: 25%;
+	width: 30%;
+	border-radius: 8px;
+	margin: 16% 35% 10% 35%;
+}
+
+.modalDetalle {
+	background: white;
+	height: 90%;
+	width: 80%;
+	border-radius: 25px;
+	margin: 2% 10% 10% 8%;
+}
+
+.botonesModal {
+	margin-left: 29%;
+}
+
+.modal-open {
+	overflow: scroll !important;
+}
+/* ==========================================================================
+   Media Query
+   ========================================================================== */
+
+
+@media screen and (max-width: 800px) {
+
+    .navbar-light .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+      }
+
+    i {
+        padding-left: 0!important;
+    }
+
+    .blue-container {
+        padding: 10px;
+ 
+    }
+      
+
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 801px){
+    i {
+        padding-left: 0!important;
+    }
+  
+  }
+  
+  
+ 
+  body {
+    padding: 10px !important;   
+}
+
+.ng-table-scrollcontainer {
+    width: 95%;
+    overflow-x: scroll;
+    overflow-y: visible;
+    text-align: center !important;
+}
+
+.ng-table-scrollcontainer-lista {
+    width: 95%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 523px;
+    min-width: 100px;
+}
+.ng-table-fixedcolumn {
+/*     position:absolute;  */
+    width:5em; 
+    left:0;
+    top:auto;
+}

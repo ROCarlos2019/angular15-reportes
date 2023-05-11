@@ -1,0 +1,158 @@
+<!-- INICIO HEADER -->
+<header>
+  <div class="container-fluid">
+      <div class="row header-logo">
+          <div class="col-10 ">
+              <a href="#" ><img src="/assets/img/logo-axa.png" alt="" class="img-fluid" ></a>
+          </div>
+          <div class="col-2 d-flex">
+              <a href="#" class="ml-auto p-2 icono" ><img src="/assets/img/logout.svg" class=" iconos" alt=""></a>
+          </div>
+      </div>
+      <div class="row header-menu">
+          <div class="col-12">
+              <!-- INICIO MENU -->
+              <nav class="navbar navbar-expand-lg navbar-light  " >
+                  <a class="navbar-brand" href="#">Alma Rosa Viseñor Todd</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <i class="fa fa-chart-line"></i>Reporte PLD
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                      <a class="dropdown-item" href="#">Reporte 1</a>
+                                      <a class="dropdown-item" href="#">Reporte 2</a>
+                                      <a class="dropdown-item" href="#">Reporte 3</a>
+                                  </div>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <i class="fa fa-briefcase"></i> Administrador de Reportes
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Reporte 1</a>
+                                        <a class="dropdown-item" href="#">Reporte 2</a>
+                                        <a class="dropdown-item" href="#">Reporte 3</a>
+                                  </div>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fa fa-search"></i>Consultas
+                                </a>
+                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item" href="#">Consulta cliente</a>
+                                  <a class="dropdown-item" href="#">Consulta OnDemand</a>
+                                  <a class="dropdown-item" href="#">Consulta Bitacora</a>
+                                </div>
+                              </li>
+                          </ul>
+                      </div>
+              </nav>
+              <!-- FIN MENU -->
+          </div>
+      </div>
+  </div>
+</header>
+<!-- FIN HEADER -->
+
+<!-- INICIO MAIN -->
+<main>
+<div class="container-fluid">
+  <div class="white-container margin">
+          <div class="row">
+              <div class="col-lg-6 col-xs-12">
+                      <i class="fas fa-chart-line"></i> Reporte PLD > Operaciones Inusuales
+              </div>
+              <div class="col-lg-3 col-xs-12">
+                     <strong>Area: </strong><span>Compliace</span>
+              </div>
+              <div class="col-lg-3 col-xs-12">
+                      <strong>Rol: </strong><span>Analista de compliace PLD</span>
+              </div>
+          </div>
+  </div>
+
+  <div class="blue-container"></div>
+
+ <div class="white-container">
+
+  <div class="row div-border">
+      <div class="col-lg-8 col-xs-8">
+              <strong>Estatus: </strong><span>En Proceso</span>
+      </div>
+      <div class="col-lg-4 col-xs-4">
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1"> 24 Horas</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">Adhoc </label>
+          </div>
+      </div>
+  </div>
+  <div class="div-botones d-flex">
+      <div class="ml-auto p-2  ">
+              <button type="button" class="btn btn-info"><i class="fa fa-search"></i> Buscar</button>
+              <button type="button" class="btn btn-info"><i class="fa fa-check"></i> </button>
+              <button type="button" class="btn btn-info"><i class="fa fa-pencil-alt"></i> </button>
+              <button type="button" class="btn btn-info"><i class="fa fa-times"></i></button>
+
+      </div>
+  </div>
+  <div class="div-table">
+  <table ng-table="ctrl.tableParams" id="example" class="responsive table table-striped table-bordered" style="width:100%">
+          <thead>
+              <tr>
+                  <th>GR</th>
+                  <th>CU</th>
+                  <th>Poliza</th>
+                  <th>Producto</th>
+                  <th>Ini. Vigencia</th>
+                  <th>Fin. Vigencia</th>
+                  <th>Nombre Contratante</th>
+                  <th>A. Paterno</th>
+                  <th>A. Materno</th>
+                  <th>Fec. Nacimiento</th>
+                  <th>CURP</th>
+                  <th>Domicilio</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="row in $data">
+                  <td>{{ row.goldenRecord === 'true' ? 'SI' : 'NO'}}</td>
+                  <td>{{ row.idClienteUnico}}</td>
+                  <td>{{ row.poliza}} </td>
+                  <td>{{ row.producto }}</td>
+                  <td>{{ row.inicioVigencia | date:'dd-MM-yyyy' }}</td>
+                  <td>{{ row.finVigencia | date:'dd-MM-yyyy' }}</td>
+                  <td>{{ row.nombre }}</td>
+                  <td>{{ row.apellidoPaterno }}</td>
+                  <td>{{ row.apellidomaterno }}</td>
+                  <td>{{ row.fechaNacimiento | date:'dd-MM-yyyy' }}</td>
+                  <td>{{ row.curp }}</td>
+                  <td>{{ row.domicilio }}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  <div class="div-botones d-flex">
+          <div class="ml-auto p-2  ">
+                  <button type="button" class="btn btn-info"><i class="fa fa-hand-paper"></i> Capturar</button>
+                  <button type="button" class="btn btn-info"><i class="fa fa-save"></i> Guardar</button>
+                  <button type="button" class="btn btn-info"><i class="fa fa-file-alt"></i> Generar Reporte</button>
+                  <button type="button" class="btn btn-info"><i class="fa fa-sign-out-alt"></i>Salir </button>
+
+          </div>
+  </div>
+</div>
+
+
+
+</div>
+</main>
+<!-- FIN MAIN -->
