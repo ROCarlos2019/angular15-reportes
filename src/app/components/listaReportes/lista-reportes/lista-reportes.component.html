@@ -1,0 +1,70 @@
+<app-head></app-head>
+
+<div class="container-fluid">
+  <div class="white-container margin">
+    <div class="row">
+      <div class="col-lg-6 col-xs-12">
+        <i class="fas fa-chart-line"></i> Reporte PLD >&nbsp;
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Área: &nbsp;</strong><span>Compliance</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Rol:&nbsp; </strong><span>{{user.rol}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blue-container"></div>
+  <div class="white-container">
+
+    <div class="ng-table-scrollcontainer-lista">
+      <table ng-table="tableParams" class="table table-condensed table-bordered table-striped" show-filter="false">
+        <tr *ngFor="let datos of reportesList">
+          <td title="''" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+            <input type="checkbox" [ngModel]="datos.checked"
+              (click)="validaCheck($index , datos.folioReporte ,datos.nombreReporte,datos._id,datos.isVacio)" />
+          </td>
+          <td title="'FOLIO REPORTE'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+            {{datos.folioReporte}}
+          </td>
+          <td title="'FECHA CREACIÓN'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+            {{datos.fechaCreacion | date:"yyyy-MM-dd"}}</td>
+          <td title="'NOMBRE REPORTE'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+            {{datos.nombreReporte}}</td>
+          <td title="'TIPO REPORTE'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+            <div *ngFor="let tipo of tipoReporteSelect">
+              {{tipo.descripcionCNFS}}</div>
+          </td>
+        </tr>
+      </table>
+    </div><!--END TABLE -->
+
+    <div class="col-md-12 text-center">
+      <div class="ml-auto p-2  ">
+        <button type="button" class="btn btn-info" (click)="irReporte()">
+          <i class="fa fa-check"></i> Aceptar</button>
+        <button type="button" class="btn btn-info" (click)="salir()"><i class="fa fa-reply"></i> Salir</button>
+      </div>
+    </div>
+  </div><!--End continer white -->
+</div>
+
+<!--Modal cuadro de dialogo 	 -->
+<div modal="showModal" close="cancel()" class="modalConfimacion ">
+  <div class="modal-header dialog-header-error">
+    <button type="button" class="close" (click)="ok()">×</button>
+    <h4 class="modal-title text-danger"><span class="glyphicon glyphicon-warning-sign"></span> Error</h4>
+  </div>
+  <div class="modal-body">
+    <p>{{msj}}</p>
+    <br>
+    <div class="botonesModal">
+      <button class="btn btn-success" (click)="ok()">Aceptar</button>
+    </div>
+  </div>
+</div>
