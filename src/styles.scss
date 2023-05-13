@@ -1,4 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  background: yellowgreen;
+@import 'assets/css/font-awesome.min.css';
+
+.margin {
+  padding-bottom: 15px !important;
+  padding-top: 15px !important;
+}
+
+.btn-info {
+  background-image: -webkit-linear-gradient(#04519b, #033c73 60%, #02325f);
+  background-image: -o-linear-gradient(#04519b, #033c73 60%, #02325f);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#04519b),
+      color-stop(60%, #033c73), to(#02325f));
+  background-image: linear-gradient(#04519b, #033c73 60%, #02325f);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff04519b',
+      endColorstr='#ff02325f', GradientType=0);
+  -webkit-filter: none;
+  filter: none;
+  border-bottom: 1px solid #022241 !important;
+}
+
+.btn-info {
+  color: #ffffff !important;
+  background-color: #033c73 !important;
+  border-color: #033c73 !important;
+}
+
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info.focus,
+.btn-info:active,
+.btn-info.active,
+.open>.dropdown-toggle.btn-info {
+  color: #ffffff !important;
+  background-color: #022241 !important;
+  border-color: #011d37 !important;
+}
+
+.btn-info:active,
+.btn-info.active,
+.open>.dropdown-toggle.btn-info {
+  background-image: none
+}
+
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #033c73 !important;
+  border-color: #033c73 !important;
+}
+
+.btn-info .badge {
+  color: #033c73 !important;
+  background-color: #ffffff !important;
 }
