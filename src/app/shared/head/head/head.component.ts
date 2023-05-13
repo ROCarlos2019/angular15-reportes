@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeadComponent {
   user = {
-    mx: 'hola',
-    name: 'robe'
+    mx: '10203040',
+    name: 'Roberto Carlos'
   }
 
 }
