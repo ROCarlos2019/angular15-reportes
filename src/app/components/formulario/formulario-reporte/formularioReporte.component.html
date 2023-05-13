@@ -10,12 +10,12 @@
           <!-- dataRegistro.nombreReporte -->
         </div>
         <div class="col-lg-3 col-xs-12">
-          <div class="row">
+          <div class="row d-block">
             <strong>Área:&nbsp; </strong><span>Compliance</span>
           </div>
         </div>
         <div class="col-lg-3 col-xs-12">
-          <div class="row">
+          <div class="row d-block">
             <strong>Rol:&nbsp; </strong><span> Rol </span>
           </div>
         </div>
@@ -30,7 +30,7 @@
           <h4 class="panel-title">
             <a data-toggle="collapse" href="#collapseError">Errores</a>
           </h4>
-          <div id="collapseError" class="panel-collapse collapse" style="width: 104%;">
+          <div id="collapseError" class="accordion-collapse collapse" style="width: 104%;">
             <div style="overflow-y: scroll; height: 300px">
               <ul *ngIf="">
                 <li>
@@ -61,7 +61,7 @@
         </div>
 
 
-        <div class="panel-group">
+        <div class="panel-group" style="border: solid blueviolet; height: 100vh;">
           <div class="row">
             <div class="col-lg-3 col-xs-12">
             </div>
@@ -70,8 +70,8 @@
             <div class="col-lg-3 col-xs-12">
               <strong><label>Alert Id</label></strong>
               <input capitalize type="text" name="alertId" class="form-control" placeholder="Ingresa Alert Id"
-                ng-maxlength="100" ng-pattern="regexAlphaNumDiag" maxlength="100"
-                [(ngModel)]="dataRegistro.alertId" [disabled]="isConsulta" autocomplete="off">
+                ng-maxlength="100" ng-pattern="regexAlphaNumDiag" maxlength="100" [(ngModel)]="dataRegistro.alertId"
+                [disabled]="isConsulta" autocomplete="off">
               <div role="alert">
                 <span class="error" [hidden]="userForm.alertId" style="color:red">
                   Solo acepta un tamaño de 100 caracteres</span>
@@ -82,8 +82,8 @@
             <div class="col-lg-3 col-xs-12">
               <strong><label>Case Id</label></strong>
               <input capitalize type="text" name="caseId" class="form-control" placeholder="Ingresa Case Id"
-                maxlength="100" [(ngModel)]="dataRegistro.caseId" ng-pattern="regexAlphaNumDiag"
-                [disabled]="isConsulta" autocomplete="off">
+                maxlength="100" [(ngModel)]="dataRegistro.caseId" ng-pattern="regexAlphaNumDiag" [disabled]="isConsulta"
+                autocomplete="off">
               <div role="alert">
                 <span class="error" [hidden]="userForm.caseId" style="color:red">
                   Solo acepta un tamaño de 100 caracteres</span>
@@ -95,794 +95,798 @@
           <br>
 
           <!--  *********************************************	DATOS REPORTE***********************************************************  -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" href="#collapse1">Datos Reporte</a>
-              </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label>Tipo</label></strong>
-                    <select class="form-control" ng-model="ctrl.dataRegistro.tipoReporte" name="tipoReporte" ng-required="true" ng-disabled="true">
-											<option *ngFor="let item of tipoReporteSelect" [ngValue]="item.num" > {{ item.name }} </option>
-									</select>
-                  </div>
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Período</label></strong>
-                    <input capitalize type="text" name="periodo" [disabled]="isConsulta || disabledPeriodo"
-                      class="form-control" placeholder="Ingresa periodo" autocomplete="off" [required]="true"
-                      ng-pattern="regexNumber" [(ngModel)]="dataRegistro.periodo" maxlength="8"
-                      ng-minlength="6" ng-maxlength="8">
-
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.periodo">
-                        Solo acepta un tamaño de 6-8 caracteres</span>
-                      <span [hidden]="userForm.periodo" style="color:red">Solo números</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-xs-12">
-                    <strong><label>Folio</label></strong>
-                    <input capitalize type="text" name="id" readonly="trues" [disabled]="isConsulta"
-                      class="form-control" placeholder="Ingresa Folio" maxlength="60"
-                      [(ngModel)]="dataRegistro.folio" autocomplete="off">
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Órgano Supervisor</label></strong>
-                    <select class="form-control" [(ngModel)]="dataRegistro.organoSupervisor"
-                      name="organoSupervisor" [required]="true" [disabled]="true">
-                      <option *ngFor="let item of organoSupervisorSelect" [ngValue]="item.id"> {{item.descripcionCNFS}}
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label>Sujeto Obligado</label></strong>
-                    <select class="form-control" [(ngModel)]="dataRegistro.sujetoObligado" name="sujetoObligado"
-                      [required]="true" [disabled]="true">
-                      <option *ngFor="let item of sujetoObligadoSelect" [ngValue]="item.id">
-                        {{item.descripcion}}
-                      </option>
-                    </select>
-                  </div>
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label>Estado</label></strong>
-                    <select class="form-control" [(ngModel)]="estadoReporte" name="estadoReporte"
-                      [disabled]="isConsulta" ng-change="cambioEstadoReporte()">
-                      <option *ngFor="let item of localidadEstadoSelect"
-                      [ngValue]="item.descripcionCNFS" > {{ item.descripcionCNFS }} </option>
-                    </select>
-                  </div>
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><span class="red-text">*</span><label>Localidad</label></strong>
-                    <select class="form-control" [(ngModel)]="dataRegistro.localidad" name="localidad"
-                      [disabled]="isConsulta" [required]="true">
-                      <option *ngFor="let item of localidadSelect " [ngValue]="item.id">
-                        {{item.descripcionSecundariaCNFS}}</option>
-                    </select>
-                  </div>
-
-
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label>Sucursal</label></strong> <input capitalize type="text" name="id"
-                      class="form-control" readonly maxlength="60" [(ngModel)]="dataRegistro.sucursal"
-                      autocomplete="off">
-                  </div>
-                </div>
-
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  Datos Reporte
+                </button>
               </div>
-            </div>
-          </div>
-          <!-- *************************************DATOS OPERAICONES *****************************************************************-->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" href="#datosOperacion">Datos Operación</a>
-              </h4>
-            </div>
-            <div id="datosOperacion" class="panel-collapse collapse">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-lg-5 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Tipo Operación</label></strong>
-                    <i [hidden]="true" ng-init="popoverTipoOperacion=false" style="padding: 4px;"
-                      ng-mouseover="popoverTipoOperacion=true" ng-mouseleave="popoverTipoOperacion=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTipoOperacion"
-                      uib-popover="'{'(datosEDOS.tipoOperacion=== null || datosEDOS.tipoOperacion=== '') ? 'Vacío': datosEDOS.tipoOperacion'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="dataRegistro.tipoOperacion" name="tipoOperación"
-                      [required]="true" [disabled]="isConsulta">
-                      <option *ngFor="let item of tipoOperacionSelect" [ngValue]="item.id">
-                        {{item.descripcionCNFS}}
-                      </option>
-                    </select>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label>Tipo</label></strong>
+                      <select class="form-control" ng-model="ctrl.dataRegistro.tipoReporte" name="tipoReporte"
+                        ng-required="true" ng-disabled="true">
+                        <option *ngFor="let item of tipoReporteSelect" [ngValue]="item.num"> {{ item.name }} </option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Período</label></strong>
+                      <input capitalize type="text" name="periodo" [disabled]="isConsulta || disabledPeriodo"
+                        class="form-control" placeholder="Ingresa periodo" autocomplete="off" [required]="true"
+                        ng-pattern="regexNumber" [(ngModel)]="dataRegistro.periodo" maxlength="8" ng-minlength="6"
+                        ng-maxlength="8">
 
-
-
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Instrumento Monetario</label></strong>
-                    <i [hidden]="false" ng-init="popoverInstrumentoMonetario=false" style="padding: 4px;"
-                      ng-mouseover="popoverInstrumentoMonetario=true" ng-mouseleave="popoverInstrumentoMonetario=false"
-                      popover-append-to-body="true" popover-trigger="'none'"
-                      popover-is-open="popoverInstrumentoMonetario"
-                      uib-popover="'{'(datosEDOS.instrumentoMonetario=== null || datosEDOS.instrumentoMonetario=== '' ) ? 'Vacío': datosEDOS.instrumentoMonetario'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="dataRegistro.instrumentoMonetario"
-                      name="instrumentoMonetario" [required]="true" [disabled]="isConsulta">
-                      <option *ngFor="let item of instrumentoMonetarioSelect" [ngValue]="item.id">
-                        {{item.descripcionCNFS}}</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Número de Póliza</label></strong>
-                    <i [hidden]="false " ng-init="popoverPoliza=false" style="padding: 4px;"
-                      ng-mouseover="popoverPoliza=true" ng-mouseleave="popoverPoliza=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverPoliza"
-                      uib-popover="'{'(datosEDOS.poliza=== null || datosEDOS.poliza=== '') ? 'Vacío': datosEDOS.poliza'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="poliza" [disabled]="isConsulta" class="form-control"
-                      placeholder="Ingresa el número de póliza"
-                      ng-change="dataRegistro.numeroPoliza = dataRegistro.numeroPoliza.toUpperCase()"
-                      [(ngModel)]="dataRegistro.numeroPoliza" autocomplete="off" maxlength="16" [required]="true"
-                      ng-pattern="regexPoliza" ng-minlength="1" ng-maxlength="16">
-
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.poliza" style="color:red">
-                        Solo acepta un tamaño de 16 caracteres</span>
-                      <span class="error" [hidden]="userForm.poliza" style="color:red">
-                        Solo acepta un minimo de 1 caracter</span>
-                      <span [hidden]="userForm.poliza" style="color:red">
-                        Solo se aceptan letras y números</span>
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.periodo">
+                          Solo acepta un tamaño de 6-8 caracteres</span>
+                        <span [hidden]="userForm.periodo" style="color:red">Solo números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-xs-12">
+                      <strong><label>Folio</label></strong>
+                      <input capitalize type="text" name="id" readonly="trues" [disabled]="isConsulta"
+                        class="form-control" placeholder="Ingresa Folio" maxlength="60" [(ngModel)]="dataRegistro.folio"
+                        autocomplete="off">
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Órgano Supervisor</label></strong>
+                      <select class="form-control" [(ngModel)]="dataRegistro.organoSupervisor" name="organoSupervisor"
+                        [required]="true" [disabled]="true">
+                        <option *ngFor="let item of organoSupervisorSelect" [ngValue]="item.id">
+                          {{item.descripcionCNFS}}
+                        </option>
+                      </select>
                     </div>
                   </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-lg-2 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Monto de la Prima</label></strong>
-                    <i [hidden]="false" ng-init="popoverMontoPrima=false" style="padding: 4px;"
-                      ng-mouseover="popoverMontoPrima=true" ng-mouseleave="popoverMontoPrima=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverMontoPrima"
-                      uib-popover="'{'(datosEDOS.montoPrima=== null || datosEDOS.montoPrima=== '') ? 'Vacío': datosEDOS.montoPrima'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="montoPrima" class="form-control"
-                      [(ngModel)]="dataRegistro.montoPrima" maxlength="17" autocomplete="off" [required]="true"
-                      ng-pattern="regexFloat" ng-maxlength="17" [disabled]="isConsulta">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.montoPrima">
-                        Solo acepta un tamaño de 17 caracteres</span>
-                      <span [hidden]="userForm.montoPrima" style="color:red">
-                        Solo se aceptan números con formato de monto</span>
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label>Sujeto Obligado</label></strong>
+                      <select class="form-control" [(ngModel)]="dataRegistro.sujetoObligado" name="sujetoObligado"
+                        [required]="true" [disabled]="true">
+                        <option *ngFor="let item of sujetoObligadoSelect" [ngValue]="item.id">
+                          {{item.descripcion}}
+                        </option>
+                      </select>
                     </div>
-                  </div>
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Tipo Moneda</label></strong>
-                    <i [hidden]="false" ng-init="popoverTipoMoneda=false" style="padding: 4px;"
-                      ng-mouseover="popoverTipoMoneda=true" ng-mouseleave="popoverTipoMoneda=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTipoMoneda"
-                      uib-popover="'{'(datosEDOS.tipoMoneda=== null || datosEDOS.tipoMoneda=== '') ? 'Vacío': datosEDOS.tipoMoneda'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="dataRegistro.tipoMoneda" name="tipoMoneda"
-                      [required]="true" [disabled]="isConsulta">
-                      <option *ngFor="let item of tipoMonedaSelect" [ngValue]="item.id" >{{item.descripcionCNFS}}
-                      </option>
-                    </select>
-                  </div>
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label>Estado</label></strong>
+                      <select class="form-control" [(ngModel)]="estadoReporte" name="estadoReporte"
+                        [disabled]="isConsulta" ng-change="cambioEstadoReporte()">
+                        <option *ngFor="let item of localidadEstadoSelect" [ngValue]="item.descripcionCNFS"> {{
+                          item.descripcionCNFS }} </option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><span class="red-text">*</span><label>Localidad</label></strong>
+                      <select class="form-control" [(ngModel)]="dataRegistro.localidad" name="localidad"
+                        [disabled]="isConsulta" [required]="true">
+                        <option *ngFor="let item of localidadSelect " [ngValue]="item.id">
+                          {{item.descripcionSecundariaCNFS}}</option>
+                      </select>
+                    </div>
 
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Fecha Operación </label></strong>
-                    <i [hidden]="false" ng-init="popoverFechaOperacion=false" style="padding: 4px;"
-                      ng-mouseover="popoverFechaOperacion=true" ng-mouseleave="popoverFechaOperacion=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverFechaOperacion"
-                      uib-popover="'{'(datosEDOS.fechaOperacion=== null || datosEDOS.fechaOperacion=== '') ? 'Vacío': datosEDOS.fechaOperacion | date'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <p class="input-group">
-                      <input type="text" class="form-control" readOnly name="fechaOperacion"
-                        [disabled]="isConsulta" placeholder="yyyy-mm-dd" uib-datepicker-popup="yyyy-MM-dd"
-                        [required]="true" uib-datepicker-popup [(ngModel)]="dataRegistro.fechaOperacion"
-                        is-open="popup2.opened" datepicker-options="dateOptions" close-text="Cerrar"
-                        current-text="Hoy" clear-text="Limpiar" />
-                      <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" (click)="open2(1)">
-                          <i class="glyphicon glyphicon-calendar"></i>
-                        </button>
-                      </span>
-                    </p>
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.fechaOperacion">
-                        Solo acepta un tamaño de 8 caracteres</span>
-                      <span [hidden]="userForm.fechaOperacion" style="color:red">
-                        Solo se aceptan números</span>
+
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label>Sucursal</label></strong> <input capitalize type="text" name="id"
+                        class="form-control" readonly maxlength="60" [(ngModel)]="dataRegistro.sucursal"
+                        autocomplete="off">
                     </div>
                   </div>
 
-                  <div class="col-lg-3 col-xs-12">
-                    <strong><label><span class="red-text" [hidden]="false">*</span>Fecha de
-                        detección</label></strong>
-                    <p class="input-group">
-                      <input type="text" class="form-control" name="fechaDetencion" readOnly uib-datepicker-popup
-                        validDate placeholder="yyyy-mm-dd" uib-datepicker-popup="yyyy-MM-dd" [required]="true"
-                        [(ngModel)]="dataRegistro.fechaDetencion" [disabled]="isConsulta"
-                        is-open="popupDetencion.opened" datepicker-options="dateOptions" close-text="Cerrar"
-                        current-text="Hoy" clear-text="Limpiar" /> <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" (click)="openDetencion(1)">
-                          <i class="glyphicon glyphicon-calendar"></i>
-                        </button>
-                      </span>
-                    </p>
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.fechaDetencion">
-                        Solo acepta un tamaño de 8 caracteres</span>
-                      <span [hidden]="userForm.fechaDetencion" style="color:red">
-                        Solo se aceptan números</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!--	END Detalle Operacion -->
-          <!--***************************************DATOS CLIENTE*************************************************-->
+            <!-- *************************************DATOS OPERACIONES *****************************************************************-->
+            <div class="accordion-item">
+              <div class="accordion-header" id="datosOperacion-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#datosOperacion" aria-expanded="true" aria-controls="datosOperacion">
+                  Datos Operación
+                </button>
+              </div>
+              <div id="datosOperacion" class="accordion-collapse collapse" aria-labelledby="datosOperacion-headingOne">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-lg-5 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Tipo Operación</label></strong>
+                      <i [hidden]="true" ng-init="popoverTipoOperacion=false" style="padding: 4px;"
+                        ng-mouseover="popoverTipoOperacion=true" ng-mouseleave="popoverTipoOperacion=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTipoOperacion"
+                        uib-popover="'{'(datosEDOS.tipoOperacion=== null || datosEDOS.tipoOperacion=== '') ? 'Vacío': datosEDOS.tipoOperacion'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="dataRegistro.tipoOperacion" name="tipoOperación"
+                        [required]="true" [disabled]="isConsulta">
+                        <option *ngFor="let item of tipoOperacionSelect" [ngValue]="item.id">
+                          {{item.descripcionCNFS}}
+                        </option>
+                      </select>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" href="#cliente">Cliente</a>
-              </h4>
-            </div>
-            <div id="cliente" class="panel-collapse collapse">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Nacionalidad</label></strong>
-                    <i [hidden]="false" ng-init="popoverNacionalidad=false" style="padding: 4px;"
-                      ng-mouseover="popoverNacionalidad=true" ng-mouseleave="popoverNacionalidad=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverNacionalidad"
-                      uib-popover="'{'(datosEDOS.nacionalidad=== null || datosEDOS.nacionalidad=== '') ? 'Vacío': datosEDOS.nacionalidad'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="dataRegistro.nacionalidad" [required]="true"
-                      name="nacionalidad" [disabled]="isConsulta">
-                      <option *ngFor="let item of nacionalidadSelect" [ngValue]="item.id">{{ item.descripcionCNFS }}
-                      </option>
-                    </select>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Tipo Persona</label></strong>
-                    <i [hidden]="false" ng-init="popoverTipoPersona=false" style="padding: 4px;"
-                      ng-mouseover="popoverTipoPersona=true" ng-mouseleave="popoverTipoPersona=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTipoPersona"
-                      uib-popover="'{'(datosEDOS.tipoPersona=== null || datosEDOS.tipoPersona=== '') ? 'Vacío': datosEDOS.tipoPersona'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="dataRegistro.tipoPersona" [required]="true"
-                      name="tipoPersona" [disabled]="isConsulta"
-                      ng-change="cambioTipoPersona(dataRegistro.tipoPersona)">
-                      <option *ngFor="let item of tipoPersonaSelect" [ngValue]="item.id">{{ item.descripcionCNFS}}
-                      </option>
-                    </select>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Razón Social</label></strong>
-                    <i [hidden]="false" ng-init="popoverRazonSocial=false" style="padding: 4px;"
-                      ng-mouseover="popoverRazonSocial=true" ng-mouseleave="popoverRazonSocial=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverRazonSocial"
-                      uib-popover="'{'(datosEDOS.razonSocial=== null || datosEDOS.razonSocial=== '') ? 'Vacío': datosEDOS.razonSocial'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="razonSocial"
-                      ng-change="dataRegistro.razonSocial = dataRegistro.razonSocial.toUpperCase()"
-                      class="form-control" [required]="true"
-                      [disabled]="disableRazon || isConsulta" ng-pattern="regexSings" maxlength="60"
-                      ng-maxlength="60" [(ngModel)]="dataRegistro.razonSocial" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.razonSocial" style="color:red">
-                        Solo acepta un tamaño de 60 caracteres</span>
-                      <span [hidden]="userForm.razonSocial" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Nombre(s)</label></strong>
-                    <i [hidden]="false" ng-init="popoverNombre=false" style="padding: 4px;"
-                      ng-mouseover="popoverNombre=true" ng-mouseleave="popoverNombre=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverNombre"
-                      uib-popover="'{'(datosEDOS.nombre=== null || datosEDOS.nombre=== '') ? 'Vacío': datosEDOS.nombre'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="nombre"
-                      ng-change="dataRegistro.nombreCont = dataRegistro.nombreCont.toUpperCase()"
-                      class="form-control" maxlength="60" ng-maxlength="60" ng-pattern="regexAlphaNumeric"
-                      [required]="true" [disabled]="disablePersona || isConsulta"
-                      [(ngModel)]="dataRegistro.nombreCont" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.nombre" style="color:red">
-                        Solo acepta un tamaño de 60 caracteres</span>
-                      <span [hidden]="userForm.nombre" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Apellido Paterno</label></strong>
-                    <i [hidden]="false" ng-init="popoverApellidoPaterno=false" style="padding: 4px;"
-                      ng-mouseover="popoverApellidoPaterno=true" ng-mouseleave="popoverApellidoPaterno=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApellidoPaterno"
-                      uib-popover="'{'(datosEDOS.apellidoPaterno=== null || datosEDOS.apellidoPaterno=== '') ? 'Vacío': datosEDOS.apellidoPaterno'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="apPaterno" class="form-control" maxlength="60"
-                      [required]="true" ng-pattern="regexAlphaNumeric"
-                      [disabled]="disablePersona || isConsulta" ng-maxlength="60"
-                      [(ngModel)]="dataRegistro.apellidoPaternoCont" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.apPaterno">
-                        Solo aceptan un tamaño de 60 caracteres</span>
-                      <span [hidden]="userForm.apPaterno" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Apellido Materno</label></strong>
-                    <i [hidden]="false" ng-init="popoverApellidoMaterno=false" style="padding: 4px;"
-                      ng-mouseover="popoverApellidoMaterno=true" ng-mouseleave="popoverApellidoMaterno=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApellidoMaterno"
-                      uib-popover="'{'(datosEDOS.apellidoMaterno=== null || datosEDOS.apellidoMaterno=== '') ? 'Vacío': datosEDOS.apellidoMaterno'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="apMaterno" class="form-control" maxlength="30" ng-maxlength="30"
-                      ng-pattern="regexAlphaNumeric" [required]="true "
-                      [disabled]="disablePersona || isConsulta"
-                      [(ngModel)]="dataRegistro.apellidoMaternoCont" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.apMaterno">
-                        Solo aceptan un tamaño de 30 caracteres</span>
-                      <span [hidden]="userForm.apMaterno" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>RFC</label></strong>
-                    <i [hidden]="false" ng-init="popoverRFC=false" style="padding: 4px;"
-                      ng-mouseover="popoverRFC=true" ng-mouseleave="popoverRFC=false" popover-append-to-body="true"
-                      popover-trigger="'none'" popover-is-open="popoverRFC"
-                      uib-popover="'{'(datosEDOS.rfc=== null || datosEDOS.rfc=== '') ? 'Vacío': datosEDOS.rfc'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="rfc" [disabled]="isConsulta" class="form-control"
-                      [required]="true" ng-pattern="regexRfc" ng-maxlength="13" maxlength="13"
-                      [(ngModel)]="dataRegistro.rfc" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.rfc">
-                        Solo acepta un tamaño de 13 caracteres</span>
-                      <span [hidden]="userForm.rfc" style="color:red">
-                        Ingrese un rfc válido.<br></span>
 
-                      <span [hidden]="userForm.rfcInvalid" style="color:red">
-                        La fecha de nacimiento no coincide con la del RFC</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>CURP</label></strong>
-                    <i [hidden]="false" ng-init="popoverCurp=false" style="padding: 4px;"
-                      ng-mouseover="popoverCurp=true" ng-mouseleave="popoverCurp=false" popover-append-to-body="true"
-                      popover-trigger="'none'" popover-is-open="popoverCurp"
-                      uib-popover="'{'(datosEDOS.curp=== null || datosEDOS.curp=== '') ? 'Vacío': datosEDOS.curp'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="curp"
-                      ng-change="dataRegistro.curp = dataRegistro.curp.toUpperCase()" capitalize
-                      class="form-control" ng-pattern="regexCurp" ng-maxlength="18"
-                      [disabled]="disablePersona || isConsulta" maxlength="18"
-                      [(ngModel)]="dataRegistro.curp" autocomplete="off">
 
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.curp">
-                        Solo acepta un tamaño de 18 caracteres</span>
-                      <span [hidden]="userForm.curp" style="color:red">
-                        Ingrese un curp válido</span>
                     </div>
-                  </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Instrumento Monetario</label></strong>
+                      <i [hidden]="false" ng-init="popoverInstrumentoMonetario=false" style="padding: 4px;"
+                        ng-mouseover="popoverInstrumentoMonetario=true"
+                        ng-mouseleave="popoverInstrumentoMonetario=false" popover-append-to-body="true"
+                        popover-trigger="'none'" popover-is-open="popoverInstrumentoMonetario"
+                        uib-popover="'{'(datosEDOS.instrumentoMonetario=== null || datosEDOS.instrumentoMonetario=== '' ) ? 'Vacío': datosEDOS.instrumentoMonetario'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="dataRegistro.instrumentoMonetario"
+                        name="instrumentoMonetario" [required]="true" [disabled]="isConsulta">
+                        <option *ngFor="let item of instrumentoMonetarioSelect" [ngValue]="item.id">
+                          {{item.descripcionCNFS}}</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Número de Póliza</label></strong>
+                      <i [hidden]="false " ng-init="popoverPoliza=false" style="padding: 4px;"
+                        ng-mouseover="popoverPoliza=true" ng-mouseleave="popoverPoliza=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverPoliza"
+                        uib-popover="'{'(datosEDOS.poliza=== null || datosEDOS.poliza=== '') ? 'Vacío': datosEDOS.poliza'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="poliza" [disabled]="isConsulta" class="form-control"
+                        placeholder="Ingresa el número de póliza"
+                        ng-change="dataRegistro.numeroPoliza = dataRegistro.numeroPoliza.toUpperCase()"
+                        [(ngModel)]="dataRegistro.numeroPoliza" autocomplete="off" maxlength="16" [required]="true"
+                        ng-pattern="regexPoliza" ng-minlength="1" ng-maxlength="16">
 
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><span class="red-text">*</span> <label>Fecha nacimiento</label></strong>
-                    <i [hidden]="false" ng-init="popoverFechaNacimiento=false" style="padding: 4px;"
-                      ng-mouseover="popoverFechaNacimiento=true" ng-mouseleave="popoverFechaNacimiento=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverFechaNacimiento"
-                      uib-popover="'{'(datosEDOS.fechaNacimiento=== null || datosEDOS.fechaNacimiento=== '') ? 'Vacío': datosEDOS.fechaNacimiento'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <p class="input-group">
-                      <input type="text" class="form-control" readOnly name="fechaNacimiento" placeholder="yyyy-mm-dd"
-                        uib-datepicker-popup="yyyy-MM-dd" [required]="true" uib-datepicker-popup
-                        [(ngModel)]="dataRegistro.fechaNacimiento" is-open="popupNacimiento.opened"
-                        [disabled]="isConsulta" datepicker-options="dateOptions" close-text="Cerrar"
-                        current-text="Hoy" clear-text="Limpiar" /> <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" (click)="openNacimiento(1)">
-                          <i class="glyphicon glyphicon-calendar"></i>
-                        </button>
-                      </span>
-                    </p>
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.fechaNacimiento">
-                        Solo acepta un tamaño de 8 caracteres</span>
-                      <span [hidden]="userForm.fechaNacimiento" style="color:red">
-                        Solo se aceptan números</span>
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.poliza" style="color:red">
+                          Solo acepta un tamaño de 16 caracteres</span>
+                        <span class="error" [hidden]="userForm.poliza" style="color:red">
+                          Solo acepta un minimo de 1 caracter</span>
+                        <span [hidden]="userForm.poliza" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="row" style=" margin-top: 9px;">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Domicilio</label></strong>
-                    <i [hidden]="false" ng-init="popoverDomicilio=false" style="padding: 4px;"
-                      ng-mouseover="popoverDomicilio=true" ng-mouseleave="popoverDomicilio=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverDomicilio"
-                      uib-popover="'{'(datosEDOS.domicilio=== null || datosEDOS.domicilio=== '') ? 'Vacío': datosEDOS.domicilio'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="domicilio" [disabled]="isConsulta" class="form-control"
-                      [required]="true" ng-pattern="regexAlphaNumeric" ng-maxlength="60" maxlength="60"
-                      [(ngModel)]="dataRegistro.domicilio" autocomplete="off">
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-2 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Monto de la Prima</label></strong>
+                      <i [hidden]="false" ng-init="popoverMontoPrima=false" style="padding: 4px;"
+                        ng-mouseover="popoverMontoPrima=true" ng-mouseleave="popoverMontoPrima=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverMontoPrima"
+                        uib-popover="'{'(datosEDOS.montoPrima=== null || datosEDOS.montoPrima=== '') ? 'Vacío': datosEDOS.montoPrima'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="montoPrima" class="form-control"
+                        [(ngModel)]="dataRegistro.montoPrima" maxlength="17" autocomplete="off" [required]="true"
+                        ng-pattern="regexFloat" ng-maxlength="17" [disabled]="isConsulta">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.montoPrima">
+                          Solo acepta un tamaño de 17 caracteres</span>
+                        <span [hidden]="userForm.montoPrima" style="color:red">
+                          Solo se aceptan números con formato de monto</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Tipo Moneda</label></strong>
+                      <i [hidden]="false" ng-init="popoverTipoMoneda=false" style="padding: 4px;"
+                        ng-mouseover="popoverTipoMoneda=true" ng-mouseleave="popoverTipoMoneda=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTipoMoneda"
+                        uib-popover="'{'(datosEDOS.tipoMoneda=== null || datosEDOS.tipoMoneda=== '') ? 'Vacío': datosEDOS.tipoMoneda'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="dataRegistro.tipoMoneda" name="tipoMoneda"
+                        [required]="true" [disabled]="isConsulta">
+                        <option *ngFor="let item of tipoMonedaSelect" [ngValue]="item.id">{{item.descripcionCNFS}}
+                        </option>
+                      </select>
+                    </div>
 
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.domicilio" style="color:red">
-                        Solo acepta un tamaño de 60 caracteres</span>
-                      <span class="error" [hidden]="userForm.domicilio" style="color:red">
-                        Solo acepta un minimo de 8 caracteres</span>
-                      <span [hidden]="userForm.domicilio" style="color:red">
-                        Solo se aceptan letras y números </span>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Fecha Operación </label></strong>
+                      <i [hidden]="false" ng-init="popoverFechaOperacion=false" style="padding: 4px;"
+                        ng-mouseover="popoverFechaOperacion=true" ng-mouseleave="popoverFechaOperacion=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverFechaOperacion"
+                        uib-popover="'{'(datosEDOS.fechaOperacion=== null || datosEDOS.fechaOperacion=== '') ? 'Vacío': datosEDOS.fechaOperacion | date'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <p class="input-group">
+                        <input type="text" class="form-control" readOnly name="fechaOperacion" [disabled]="isConsulta"
+                          placeholder="yyyy-mm-dd" uib-datepicker-popup="yyyy-MM-dd" [required]="true"
+                          uib-datepicker-popup [(ngModel)]="dataRegistro.fechaOperacion" is-open="popup2.opened"
+                          datepicker-options="dateOptions" close-text="Cerrar" current-text="Hoy"
+                          clear-text="Limpiar" />
+                        <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" (click)="open2(1)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </button>
+                        </span>
+                      </p>
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.fechaOperacion">
+                          Solo acepta un tamaño de 8 caracteres</span>
+                        <span [hidden]="userForm.fechaOperacion" style="color:red">
+                          Solo se aceptan números</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Colonia</label></strong>
-                    <i [hidden]="false" ng-init="popoverColonia=false" style="padding: 4px;"
-                      ng-mouseover="popoverColonia=true" ng-mouseleave="popoverColonia=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverColonia"
-                      uib-popover="'{'(datosEDOS.colonia=== null || datosEDOS.colonia=== '') ? 'Vacío': datosEDOS.colonia'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="colonia" [disabled]="isConsulta" class="form-control"
-                      [required]="true" ng-pattern="regexAlphaNumeric" ng-maxlength="30" maxlength="30"
-                      [(ngModel)]="dataRegistro.colonia" autocomplete="off">
 
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.colonia" style="color:red">
-                        Solo acepta un tamaño de 30 caracteres</span>
-                      <span class="error" [hidden]="userForm.colonia" style="color:red">
-                        Solo acepta un minimo de 8 caracteres</span>
-                      <span [hidden]="userForm.colonia" style="color:red">
-                        Solo se aceptan letras y números</span>
+                    <div class="col-lg-3 col-xs-12">
+                      <strong><label><span class="red-text" [hidden]="false">*</span>Fecha de
+                          detección</label></strong>
+                      <p class="input-group">
+                        <input type="text" class="form-control" name="fechaDetencion" readOnly uib-datepicker-popup
+                          validDate placeholder="yyyy-mm-dd" uib-datepicker-popup="yyyy-MM-dd" [required]="true"
+                          [(ngModel)]="dataRegistro.fechaDetencion" [disabled]="isConsulta"
+                          is-open="popupDetencion.opened" datepicker-options="dateOptions" close-text="Cerrar"
+                          current-text="Hoy" clear-text="Limpiar" /> <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" (click)="openDetencion(1)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </button>
+                        </span>
+                      </p>
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.fechaDetencion">
+                          Solo acepta un tamaño de 8 caracteres</span>
+                        <span [hidden]="userForm.fechaDetencion" style="color:red">
+                          Solo se aceptan números</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Estado</label></strong>
-                    <i [hidden]="false" ng-init="popoverEstado=false" style="padding: 4px;"
-                      ng-mouseover="popoverEstado=true" ng-mouseleave="popoverEstado=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverEstado"
-                      uib-popover="'{'(datosEDOS.estado=== null || datosEDOS.estado=== '') ? 'Vacío': datosEDOS.estado'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="estado" [disabled]="isConsulta"
-                      name="estadoCliente" ng-change="cambioEstadoCliente()"
-                      ng-init="estado === null ? 'Seleccione un valor' : estado">
-                      <option *ngFor="let item of localidadEstadoSelect"
-                      [ngValue]="item.descripcionCNFS"> {{item.descripcionCNFS}} </option>
-                    </select>
-                  </div>
-                </div>
-                <br>
-                <div class="row">
-
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Localidad</label></strong>
-                    <i [hidden]="false" ng-init="popoverLocalidad=false" style="padding: 4px;"
-                      ng-mouseover="popoverLocalidad=true" ng-mouseleave="popoverLocalidad=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverLocalidad"
-                      uib-popover="'{'(datosEDOS.localidad=== null || datosEDOS.localidad=== '') ? 'Vacío': datosEDOS.localidad'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="dataRegistro.localidadCliente"
-                      [disabled]="isConsulta" name="localidadCliente" [required]="true">
-                      <option *ngFor="let item of localidadSelect" [ngValue]="item.id" >
-                        {{item.descripcionSecundariaCNFS}}</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Teléfono</label></strong>
-                    <i [hidden]="false" ng-init="popoverTelefono=false" style="padding: 4px;"
-                      ng-mouseover="popoverTelefono=true" ng-mouseleave="popoverTelefono=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTelefono"
-                      uib-popover="'{'(datosEDOS.telefono=== null || datosEDOS.telefono=== '') ? 'Vacío': datosEDOS.telefono'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="telefono" [disabled]="isConsulta" class="form-control"
-                      ng-pattern="regexPhoneNumber" ng-maxlength="40" [required]="true" maxlength="40"
-                      [(ngModel)]="dataRegistro.telefono" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.telefono" style="color:red">
-                        Solo acepta un tamaño de 40 caracteres</span>
-                      <span class="error" [hidden]="userForm.telefono" style="color:red">
-                        Solo acepta un minimo de 8 caracteres</span>
-                      <span [hidden]="userForm.telefono" style="color:red">
-                        Solo se aceptan números y diagonal</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Actividad Económica</label></strong>
-                    <i [hidden]="false" ng-init="popoverActividad=false" style="padding: 4px;"
-                      ng-mouseover="popoverActividad=true" ng-mouseleave="popoverActividad=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverActividad"
-                      uib-popover="'{'(datosEDOS.actividad=== null || datosEDOS.actividad=== '') ? 'Vacío': datosEDOS.actividad'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <select class="form-control" [(ngModel)]="dataRegistro.actividadEconomica"
-                      [disabled]="isConsulta" name="actividadeconomica" [required]="true">
-                      <option *ngFor="let item of actividadEconomicaSelect" [ngValue]="item.id">
-                        {{item.descripcionCNFS}}</option>
-                    </select>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!--********************************************DATOS AGENTE **************************************************************** -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" href="#agente">Agente</a>
-              </h4>
-            </div>
-            <div id="agente" class="panel-collapse collapse">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Nombre(s)</label></strong>
-                    <i [hidden]="false" ng-init="popoverNombreAge=false" style="padding: 4px;"
-                      ng-mouseover="popoverNombreAge=true" ng-mouseleave="popoverNombreAge=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverNombreAge"
-                      uib-popover="'{'(datosEDOS.nombre_agente=== null || datosEDOS.nombre_agente=== '') ? 'Vacío': datosEDOS.nombre_agente'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="nombreAgente"
-                      ng-change="dataRegistro.nombreAgente = dataRegistro.nombreAgente.toUpperCase()"
-                      class="form-control" maxlength="60" [required]="true" ng-pattern="regexAlphaNumeric"
-                      [disabled]="isConsulta" [(ngModel)]="dataRegistro.nombreAgente" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.nombreAgente" style="color:red">
-                        Solo acepta un tamaño de 60 caracteres</span>
-                      <span [hidden]="userForm.nombreAgente" style="color:red">
-                        Solo se aceptan letras y números</span>
+            <!--***************************************DATOS CLIENTE*************************************************-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="datosCliente-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#datosCliente-collapseOne" aria-expanded="true"
+                  aria-controls="datosCliente-collapseOne">
+                  Cliente
+                </button>
+              </h2>
+              <div id="datosCliente-collapseOne" class="accordion-collapse collapse"
+                aria-labelledby="datosCliente-headingOne">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Nacionalidad</label></strong>
+                      <i [hidden]="false" ng-init="popoverNacionalidad=false" style="padding: 4px;"
+                        ng-mouseover="popoverNacionalidad=true" ng-mouseleave="popoverNacionalidad=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverNacionalidad"
+                        uib-popover="'{'(datosEDOS.nacionalidad=== null || datosEDOS.nacionalidad=== '') ? 'Vacío': datosEDOS.nacionalidad'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="dataRegistro.nacionalidad" [required]="true"
+                        name="nacionalidad" [disabled]="isConsulta">
+                        <option *ngFor="let item of nacionalidadSelect" [ngValue]="item.id">{{ item.descripcionCNFS }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Tipo Persona</label></strong>
+                      <i [hidden]="false" ng-init="popoverTipoPersona=false" style="padding: 4px;"
+                        ng-mouseover="popoverTipoPersona=true" ng-mouseleave="popoverTipoPersona=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTipoPersona"
+                        uib-popover="'{'(datosEDOS.tipoPersona=== null || datosEDOS.tipoPersona=== '') ? 'Vacío': datosEDOS.tipoPersona'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="dataRegistro.tipoPersona" [required]="true"
+                        name="tipoPersona" [disabled]="isConsulta"
+                        ng-change="cambioTipoPersona(dataRegistro.tipoPersona)">
+                        <option *ngFor="let item of tipoPersonaSelect" [ngValue]="item.id">{{ item.descripcionCNFS}}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Razón Social</label></strong>
+                      <i [hidden]="false" ng-init="popoverRazonSocial=false" style="padding: 4px;"
+                        ng-mouseover="popoverRazonSocial=true" ng-mouseleave="popoverRazonSocial=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverRazonSocial"
+                        uib-popover="'{'(datosEDOS.razonSocial=== null || datosEDOS.razonSocial=== '') ? 'Vacío': datosEDOS.razonSocial'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="razonSocial"
+                        ng-change="dataRegistro.razonSocial = dataRegistro.razonSocial.toUpperCase()"
+                        class="form-control" [required]="true" [disabled]="disableRazon || isConsulta"
+                        ng-pattern="regexSings" maxlength="60" ng-maxlength="60" [(ngModel)]="dataRegistro.razonSocial"
+                        autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.razonSocial" style="color:red">
+                          Solo acepta un tamaño de 60 caracteres</span>
+                        <span [hidden]="userForm.razonSocial" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Apellido Paterno</label></strong>
-                    <i [hidden]="false" ng-init="popoverApePAge=false" style="padding: 4px;"
-                      ng-mouseover="popoverApePAge=true" ng-mouseleave="popoverApePAge=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApePAge"
-                      uib-popover="'{'(datosEDOS.apellidoP_agente=== null || datosEDOS.apellidoP_agente=== '') ? 'Vacío': datosEDOS.apellidoP_agente'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="apellidoPaternoAgente" ng-pattern="regexAlphaNumeric"
-                      [disabled]="isConsulta" class="form-control" maxlength="60"
-                      [(ngModel)]="dataRegistro.apellidoPaternoAgente" autocomplete="off" [required]="true">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.apellidoPaternoAgente"
-                        style="color:red">
-                        Solo acepta un tamaño de 60 caracteres</span>
-                      <span [hidden]="userForm.apellidoPaternoAgente" style="color:red">
-                        Solo se aceptan letras y números </span>
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Nombre(s)</label></strong>
+                      <i [hidden]="false" ng-init="popoverNombre=false" style="padding: 4px;"
+                        ng-mouseover="popoverNombre=true" ng-mouseleave="popoverNombre=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverNombre"
+                        uib-popover="'{'(datosEDOS.nombre=== null || datosEDOS.nombre=== '') ? 'Vacío': datosEDOS.nombre'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="nombre"
+                        ng-change="dataRegistro.nombreCont = dataRegistro.nombreCont.toUpperCase()" class="form-control"
+                        maxlength="60" ng-maxlength="60" ng-pattern="regexAlphaNumeric" [required]="true"
+                        [disabled]="disablePersona || isConsulta" [(ngModel)]="dataRegistro.nombreCont"
+                        autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.nombre" style="color:red">
+                          Solo acepta un tamaño de 60 caracteres</span>
+                        <span [hidden]="userForm.nombre" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Apellido Paterno</label></strong>
+                      <i [hidden]="false" ng-init="popoverApellidoPaterno=false" style="padding: 4px;"
+                        ng-mouseover="popoverApellidoPaterno=true" ng-mouseleave="popoverApellidoPaterno=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApellidoPaterno"
+                        uib-popover="'{'(datosEDOS.apellidoPaterno=== null || datosEDOS.apellidoPaterno=== '') ? 'Vacío': datosEDOS.apellidoPaterno'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="apPaterno" class="form-control" maxlength="60"
+                        [required]="true" ng-pattern="regexAlphaNumeric" [disabled]="disablePersona || isConsulta"
+                        ng-maxlength="60" [(ngModel)]="dataRegistro.apellidoPaternoCont" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.apPaterno">
+                          Solo aceptan un tamaño de 60 caracteres</span>
+                        <span [hidden]="userForm.apPaterno" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Apellido Materno</label></strong>
+                      <i [hidden]="false" ng-init="popoverApellidoMaterno=false" style="padding: 4px;"
+                        ng-mouseover="popoverApellidoMaterno=true" ng-mouseleave="popoverApellidoMaterno=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApellidoMaterno"
+                        uib-popover="'{'(datosEDOS.apellidoMaterno=== null || datosEDOS.apellidoMaterno=== '') ? 'Vacío': datosEDOS.apellidoMaterno'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="apMaterno" class="form-control" maxlength="30"
+                        ng-maxlength="30" ng-pattern="regexAlphaNumeric" [required]="true "
+                        [disabled]="disablePersona || isConsulta" [(ngModel)]="dataRegistro.apellidoMaternoCont"
+                        autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.apMaterno">
+                          Solo aceptan un tamaño de 30 caracteres</span>
+                        <span [hidden]="userForm.apMaterno" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>Apellido Materno</label></strong>
-                    <i [hidden]="false" ng-init="popoverApeMAge=false" style="padding: 4px;"
-                      ng-mouseover="popoverApeMAge=true" ng-mouseleave="popoverApeMAge=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApeMAge"
-                      uib-popover="'{'(datosEDOS.apellidoM_agente=== null || datosEDOS.apellidoM_agente=== '') ? 'Vacío': datosEDOS.apellidoM_agente'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="apellidoMaternoAgente" [disabled]="isConsulta"
-                      ng-change="dataRegistro.apellidoMaternoAgente = dataRegistro.apellidoMaternoAgente.toUpperCase()"
-                      class="form-control" [required]="true" ng-pattern="regexAlphaNumeric" maxlength="30"
-                      [(ngModel)]="dataRegistro.apellidoMaternoAgente" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.apellidoMaternoAgente"
-                        style="color:red">
-                        Solo acepta un tamaño de 30 caracteres</span>
-                      <span [hidden]="userForm.apellidoMaternoAgente" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label><span class="red-text">*</span>RFC</label></strong>
-                    <i [hidden]="false" ng-init="popoverRFCAge=false" style="padding: 4px;"
-                      ng-mouseover="popoverRFCAge=true" ng-mouseleave="popoverRFCAge=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverRFCAge"
-                      uib-popover="'{'(datosEDOS.rfc_agente=== null || datosEDOS.rfc_agente=== '') ? 'Vacío': datosEDOS.rfc_agente'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="rfcAgente" [disabled]="isConsulta"
-                      ng-change="dataRegistro.rfcAgente = dataRegistro.rfcAgente.toUpperCase()"
-                      class="form-control" [required]="true" ng-pattern="regexRfcAgente" ng-maxlength="13"
-                      maxlength="13" [(ngModel)]="dataRegistro.rfcAgente" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.rfcAgente">
-                        Solo acepta un tamaño de 13 caracteres</span>
-                      <span [hidden]="userForm.rfcAgente" style="color:red">
-                        Ingrese un rfc válido</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-8 col-xs-12">
-                    <strong><label>CURP</label></strong>
-                    <i [hidden]="false" ng-init="popoverCurpAge=false" style="padding: 4px;"
-                      ng-mouseover="popoverCurpAge=true" ng-mouseleave="popoverCurpAge=false"
-                      popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverCurpAge"
-                      uib-popover="'{'(datosEDOS.curp_agente=== null || datosEDOS.curp_agente=== '') ? 'Vacío': datosEDOS.curp_agente'}'"
-                      class="fa fa-info-circle" aria-hidden="true"></i>
-                    <input capitalize type="text" name="curpAgente" [disabled]="isConsulta"
-                      ng-change="dataRegistro.curpAgente = dataRegistro.curpAgente.toUpperCase()"
-                      class="form-control" ng-pattern="regexCurp" ng-maxlength="18" maxlength="18"
-                      [(ngModel)]="dataRegistro.curpAgente" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.curpAgente">
-                        Solo acepta un tamaño de 18 caracteres</span>
-                      <span [hidden]="userForm.curpAgente" style="color:red">
-                        Ingrese un curp válido</span>
-                    </div>
-                  </div>
-                </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>RFC</label></strong>
+                      <i [hidden]="false" ng-init="popoverRFC=false" style="padding: 4px;"
+                        ng-mouseover="popoverRFC=true" ng-mouseleave="popoverRFC=false" popover-append-to-body="true"
+                        popover-trigger="'none'" popover-is-open="popoverRFC"
+                        uib-popover="'{'(datosEDOS.rfc=== null || datosEDOS.rfc=== '') ? 'Vacío': datosEDOS.rfc'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="rfc" [disabled]="isConsulta" class="form-control"
+                        [required]="true" ng-pattern="regexRfc" ng-maxlength="13" maxlength="13"
+                        [(ngModel)]="dataRegistro.rfc" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.rfc">
+                          Solo acepta un tamaño de 13 caracteres</span>
+                        <span [hidden]="userForm.rfc" style="color:red">
+                          Ingrese un rfc válido.<br></span>
 
+                        <span [hidden]="userForm.rfcInvalid" style="color:red">
+                          La fecha de nacimiento no coincide con la del RFC</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>CURP</label></strong>
+                      <i [hidden]="false" ng-init="popoverCurp=false" style="padding: 4px;"
+                        ng-mouseover="popoverCurp=true" ng-mouseleave="popoverCurp=false" popover-append-to-body="true"
+                        popover-trigger="'none'" popover-is-open="popoverCurp"
+                        uib-popover="'{'(datosEDOS.curp=== null || datosEDOS.curp=== '') ? 'Vacío': datosEDOS.curp'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="curp"
+                        ng-change="dataRegistro.curp = dataRegistro.curp.toUpperCase()" capitalize class="form-control"
+                        ng-pattern="regexCurp" ng-maxlength="18" [disabled]="disablePersona || isConsulta"
+                        maxlength="18" [(ngModel)]="dataRegistro.curp" autocomplete="off">
+
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.curp">
+                          Solo acepta un tamaño de 18 caracteres</span>
+                        <span [hidden]="userForm.curp" style="color:red">
+                          Ingrese un curp válido</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><span class="red-text">*</span> <label>Fecha nacimiento</label></strong>
+                      <i [hidden]="false" ng-init="popoverFechaNacimiento=false" style="padding: 4px;"
+                        ng-mouseover="popoverFechaNacimiento=true" ng-mouseleave="popoverFechaNacimiento=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverFechaNacimiento"
+                        uib-popover="'{'(datosEDOS.fechaNacimiento=== null || datosEDOS.fechaNacimiento=== '') ? 'Vacío': datosEDOS.fechaNacimiento'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <p class="input-group">
+                        <input type="text" class="form-control" readOnly name="fechaNacimiento" placeholder="yyyy-mm-dd"
+                          uib-datepicker-popup="yyyy-MM-dd" [required]="true" uib-datepicker-popup
+                          [(ngModel)]="dataRegistro.fechaNacimiento" is-open="popupNacimiento.opened"
+                          [disabled]="isConsulta" datepicker-options="dateOptions" close-text="Cerrar"
+                          current-text="Hoy" clear-text="Limpiar" /> <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" (click)="openNacimiento(1)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </button>
+                        </span>
+                      </p>
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.fechaNacimiento">
+                          Solo acepta un tamaño de 8 caracteres</span>
+                        <span [hidden]="userForm.fechaNacimiento" style="color:red">
+                          Solo se aceptan números</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" style=" margin-top: 9px;">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Domicilio</label></strong>
+                      <i [hidden]="false" ng-init="popoverDomicilio=false" style="padding: 4px;"
+                        ng-mouseover="popoverDomicilio=true" ng-mouseleave="popoverDomicilio=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverDomicilio"
+                        uib-popover="'{'(datosEDOS.domicilio=== null || datosEDOS.domicilio=== '') ? 'Vacío': datosEDOS.domicilio'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="domicilio" [disabled]="isConsulta" class="form-control"
+                        [required]="true" ng-pattern="regexAlphaNumeric" ng-maxlength="60" maxlength="60"
+                        [(ngModel)]="dataRegistro.domicilio" autocomplete="off">
+
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.domicilio" style="color:red">
+                          Solo acepta un tamaño de 60 caracteres</span>
+                        <span class="error" [hidden]="userForm.domicilio" style="color:red">
+                          Solo acepta un minimo de 8 caracteres</span>
+                        <span [hidden]="userForm.domicilio" style="color:red">
+                          Solo se aceptan letras y números </span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Colonia</label></strong>
+                      <i [hidden]="false" ng-init="popoverColonia=false" style="padding: 4px;"
+                        ng-mouseover="popoverColonia=true" ng-mouseleave="popoverColonia=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverColonia"
+                        uib-popover="'{'(datosEDOS.colonia=== null || datosEDOS.colonia=== '') ? 'Vacío': datosEDOS.colonia'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="colonia" [disabled]="isConsulta" class="form-control"
+                        [required]="true" ng-pattern="regexAlphaNumeric" ng-maxlength="30" maxlength="30"
+                        [(ngModel)]="dataRegistro.colonia" autocomplete="off">
+
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.colonia" style="color:red">
+                          Solo acepta un tamaño de 30 caracteres</span>
+                        <span class="error" [hidden]="userForm.colonia" style="color:red">
+                          Solo acepta un minimo de 8 caracteres</span>
+                        <span [hidden]="userForm.colonia" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Estado</label></strong>
+                      <i [hidden]="false" ng-init="popoverEstado=false" style="padding: 4px;"
+                        ng-mouseover="popoverEstado=true" ng-mouseleave="popoverEstado=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverEstado"
+                        uib-popover="'{'(datosEDOS.estado=== null || datosEDOS.estado=== '') ? 'Vacío': datosEDOS.estado'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="estado" [disabled]="isConsulta" name="estadoCliente"
+                        ng-change="cambioEstadoCliente()" ng-init="estado === null ? 'Seleccione un valor' : estado">
+                        <option *ngFor="let item of localidadEstadoSelect" [ngValue]="item.descripcionCNFS">
+                          {{item.descripcionCNFS}} </option>
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Localidad</label></strong>
+                      <i [hidden]="false" ng-init="popoverLocalidad=false" style="padding: 4px;"
+                        ng-mouseover="popoverLocalidad=true" ng-mouseleave="popoverLocalidad=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverLocalidad"
+                        uib-popover="'{'(datosEDOS.localidad=== null || datosEDOS.localidad=== '') ? 'Vacío': datosEDOS.localidad'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="dataRegistro.localidadCliente" [disabled]="isConsulta"
+                        name="localidadCliente" [required]="true">
+                        <option *ngFor="let item of localidadSelect" [ngValue]="item.id">
+                          {{item.descripcionSecundariaCNFS}}</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Teléfono</label></strong>
+                      <i [hidden]="false" ng-init="popoverTelefono=false" style="padding: 4px;"
+                        ng-mouseover="popoverTelefono=true" ng-mouseleave="popoverTelefono=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverTelefono"
+                        uib-popover="'{'(datosEDOS.telefono=== null || datosEDOS.telefono=== '') ? 'Vacío': datosEDOS.telefono'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="telefono" [disabled]="isConsulta" class="form-control"
+                        ng-pattern="regexPhoneNumber" ng-maxlength="40" [required]="true" maxlength="40"
+                        [(ngModel)]="dataRegistro.telefono" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.telefono" style="color:red">
+                          Solo acepta un tamaño de 40 caracteres</span>
+                        <span class="error" [hidden]="userForm.telefono" style="color:red">
+                          Solo acepta un minimo de 8 caracteres</span>
+                        <span [hidden]="userForm.telefono" style="color:red">
+                          Solo se aceptan números y diagonal</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Actividad Económica</label></strong>
+                      <i [hidden]="false" ng-init="popoverActividad=false" style="padding: 4px;"
+                        ng-mouseover="popoverActividad=true" ng-mouseleave="popoverActividad=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverActividad"
+                        uib-popover="'{'(datosEDOS.actividad=== null || datosEDOS.actividad=== '') ? 'Vacío': datosEDOS.actividad'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <select class="form-control" [(ngModel)]="dataRegistro.actividadEconomica" [disabled]="isConsulta"
+                        name="actividadeconomica" [required]="true">
+                        <option *ngFor="let item of actividadEconomicaSelect" [ngValue]="item.id">
+                          {{item.descripcionCNFS}}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- ******************************************+DATOS Personas Relacionadas************************************************	 -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" href="#personasRelacionadas">Personas Relacionadas</a>
-              </h4>
-            </div>
-            <div id="personasRelacionadas" class="panel-collapse collapse">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Personas Relacionadas</label></strong> <input capitalize type="text"
-                      name="personaRelacionada"
-                      ng-change="dataRegistro.personasRelacionadas = dataRegistro.personasRelacionadas.toUpperCase()"
-                      class="form-control" maxlength="2" ng-pattern="regexAlphaNumeric"
-                      [disabled]="isConsulta" [(ngModel)]="dataRegistro.personasRelacionadas"
-                      autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.personaRelacionada">
-                        Solo acepta un tamaño de 18 caracteres</span>
-                      <span [hidden]="userForm.personaRelacionada" style="color:red">
-                        Solo se aceptan letras y números</span>
+            <!--********************************************DATOS AGENTE **************************************************************** -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  Agente
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Nombre(s)</label></strong>
+                      <i [hidden]="false" ng-init="popoverNombreAge=false" style="padding: 4px;"
+                        ng-mouseover="popoverNombreAge=true" ng-mouseleave="popoverNombreAge=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverNombreAge"
+                        uib-popover="'{'(datosEDOS.nombre_agente=== null || datosEDOS.nombre_agente=== '') ? 'Vacío': datosEDOS.nombre_agente'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="nombreAgente"
+                        ng-change="dataRegistro.nombreAgente = dataRegistro.nombreAgente.toUpperCase()"
+                        class="form-control" maxlength="60" [required]="true" ng-pattern="regexAlphaNumeric"
+                        [disabled]="isConsulta" [(ngModel)]="dataRegistro.nombreAgente" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.nombreAgente" style="color:red">
+                          Solo acepta un tamaño de 60 caracteres</span>
+                        <span [hidden]="userForm.nombreAgente" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Apellido Paterno</label></strong>
+                      <i [hidden]="false" ng-init="popoverApePAge=false" style="padding: 4px;"
+                        ng-mouseover="popoverApePAge=true" ng-mouseleave="popoverApePAge=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApePAge"
+                        uib-popover="'{'(datosEDOS.apellidoP_agente=== null || datosEDOS.apellidoP_agente=== '') ? 'Vacío': datosEDOS.apellidoP_agente'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="apellidoPaternoAgente" ng-pattern="regexAlphaNumeric"
+                        [disabled]="isConsulta" class="form-control" maxlength="60"
+                        [(ngModel)]="dataRegistro.apellidoPaternoAgente" autocomplete="off" [required]="true">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.apellidoPaternoAgente" style="color:red">
+                          Solo acepta un tamaño de 60 caracteres</span>
+                        <span [hidden]="userForm.apellidoPaternoAgente" style="color:red">
+                          Solo se aceptan letras y números </span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>Apellido Materno</label></strong>
+                      <i [hidden]="false" ng-init="popoverApeMAge=false" style="padding: 4px;"
+                        ng-mouseover="popoverApeMAge=true" ng-mouseleave="popoverApeMAge=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverApeMAge"
+                        uib-popover="'{'(datosEDOS.apellidoM_agente=== null || datosEDOS.apellidoM_agente=== '') ? 'Vacío': datosEDOS.apellidoM_agente'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="apellidoMaternoAgente" [disabled]="isConsulta"
+                        ng-change="dataRegistro.apellidoMaternoAgente = dataRegistro.apellidoMaternoAgente.toUpperCase()"
+                        class="form-control" [required]="true" ng-pattern="regexAlphaNumeric" maxlength="30"
+                        [(ngModel)]="dataRegistro.apellidoMaternoAgente" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.apellidoMaternoAgente" style="color:red">
+                          Solo acepta un tamaño de 30 caracteres</span>
+                        <span [hidden]="userForm.apellidoMaternoAgente" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Pólizas Relacionadas</label></strong> <input capitalize type="text"
-                      name="polizasRelacionadas"
-                      ng-change="dataRegistro.polizasRelacionadas = dataRegistro.polizasRelacionadas.toUpperCase()"
-                      class="form-control" maxlength="16" ng-pattern="regexAlphaNumeric"
-                      [disabled]="isConsulta" [(ngModel)]="dataRegistro.polizasRelacionadas"
-                      autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.polizasRelacionadas">
-                        Solo acepta un tamaño de 18 caracteres</span>
-                      <span [hidden]="userForm.polizasRelacionadas" style="color:red">
-                        Solo se aceptan letras y números</span>
+                  <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label><span class="red-text">*</span>RFC</label></strong>
+                      <i [hidden]="false" ng-init="popoverRFCAge=false" style="padding: 4px;"
+                        ng-mouseover="popoverRFCAge=true" ng-mouseleave="popoverRFCAge=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverRFCAge"
+                        uib-popover="'{'(datosEDOS.rfc_agente=== null || datosEDOS.rfc_agente=== '') ? 'Vacío': datosEDOS.rfc_agente'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="rfcAgente" [disabled]="isConsulta"
+                        ng-change="dataRegistro.rfcAgente = dataRegistro.rfcAgente.toUpperCase()" class="form-control"
+                        [required]="true" ng-pattern="regexRfcAgente" ng-maxlength="13" maxlength="13"
+                        [(ngModel)]="dataRegistro.rfcAgente" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.rfcAgente">
+                          Solo acepta un tamaño de 13 caracteres</span>
+                        <span [hidden]="userForm.rfcAgente" style="color:red">
+                          Ingrese un rfc válido</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Clave del Sujeto Obligado</label></strong> <input capitalize type="text"
-                      name="claveSujetoObligado"
-                      ng-change="dataRegistro.claveSujetoObligado = dataRegistro.claveSujetoObligado.toUpperCase()"
-                      class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta"
-                      maxlength="6" [(ngModel)]="dataRegistro.claveSujetoObligado" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.claveSujetoObligado">
-                        Solo acepta un tamaño de 6 caracteres</span>
-                      <span [hidden]="userForm.claveSujetoObligado" style="color:red">
-                        Solo se aceptan letras y números</span>
+                    <div class="col-lg-8 col-xs-12">
+                      <strong><label>CURP</label></strong>
+                      <i [hidden]="false" ng-init="popoverCurpAge=false" style="padding: 4px;"
+                        ng-mouseover="popoverCurpAge=true" ng-mouseleave="popoverCurpAge=false"
+                        popover-append-to-body="true" popover-trigger="'none'" popover-is-open="popoverCurpAge"
+                        uib-popover="'{'(datosEDOS.curp_agente=== null || datosEDOS.curp_agente=== '') ? 'Vacío': datosEDOS.curp_agente'}'"
+                        class="fa fa-info-circle" aria-hidden="true"></i>
+                      <input capitalize type="text" name="curpAgente" [disabled]="isConsulta"
+                        ng-change="dataRegistro.curpAgente = dataRegistro.curpAgente.toUpperCase()" class="form-control"
+                        ng-pattern="regexCurp" ng-maxlength="18" maxlength="18" [(ngModel)]="dataRegistro.curpAgente"
+                        autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.curpAgente">
+                          Solo acepta un tamaño de 18 caracteres</span>
+                        <span [hidden]="userForm.curpAgente" style="color:red">
+                          Ingrese un curp válido</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <br>
-                <div class="row">
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Nombre Persona Relacionada</label></strong> <input capitalize type="text"
-                      name="nombrePersonaRelacionada"
-                      ng-change="dataRegistro.nombrePersonaRelacionada = dataRegistro.nombrePersonaRelacionada.toUpperCase()"
-                      class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta"
-                      maxlength="60" [(ngModel)]="dataRegistro.nombrePersonaRelacionada" autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.nombrePersonaRelacionada">
-                        Solo acepta un tamaño de 18 caracteres</span>
-                      <span [hidden]="userForm.nombrePersonaRelacionada" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Apellido Paterno</label></strong> <input capitalize type="text" name="apPaRel"
-                      ng-change="dataRegistro.apellidoPaternoPersonaRelacionada = dataRegistro.apellidoPaternoPersonaRelacionada.toUpperCase()"
-                      class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta"
-                      maxlength="60" [(ngModel)]="dataRegistro.apellidoPaternoPersonaRelacionada"
-                      autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.apPaRel">
-                        Solo acepta un tamaño de 18 caracteres</span>
-                      <span [hidden]="userForm.apPaRel" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <strong><label>Apellido Materno</label></strong> <input capitalize type="text" name="apMaRel"
-                      ng-change="dataRegistro.apellidoMaternoPersonaRelacionada = dataRegistro.apellidoMaternoPersonaRelacionada.toUpperCase()"
-                      class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta"
-                      maxlength="30" [(ngModel)]="dataRegistro.apellidoMaternoPersonaRelacionada"
-                      autocomplete="off">
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.apMaRel">
-                        Solo acepta un tamaño de 18 caracteres</span>
-                      <span [hidden]="userForm.apMaRel" style="color:red">
-                        Solo se aceptan letras y números</span>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
-          </div>
-          <!--*********************************************** DATOS DETALLE INUSUALIDAD	******************************************* -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" href="#detalleInusualidad">Detalle Inusualidad</a>
-              </h4>
-            </div>
-            <div id="detalleInusualidad" class="panel-collapse collapse">
-              <div class="panel-body">
-                <div class="row">
-                  <div class="col-lg-12 col-xs-12">
-                    <strong><label><span [hidden]="false" class="red-text">*</span>Descripción de la
-                        operación</label></strong>
-                    <textarea name="descripcionOperacion"
-                      ng-change="dataRegistro.descripcionOperacion = dataRegistro.descripcionOperacion.toUpperCase()"
-                      class="form-control" maxlength="3000" [required]="true" ng-pattern="regexTexbox"
-                      [disabled]="isConsulta" [(ngModel)]="dataRegistro.descripcionOperacion"
-                      autocomplete="off"></textarea>
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.descripcionOperacion"
-                        style="color:red">
-                        Solo acepta un tamaño de 300 caracteres</span>
-                      <span [hidden]="userForm.descripcionOperacion" style="color:red">
-                        Solo se aceptan letras, números y diagonal</span>
+            <!-- ******************************************+DATOS Personas Relacionadas************************************************	 -->
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#personasRel-collapseThree" aria-expanded="false"
+                  aria-controls="personasRel-collapseThree">
+                  Personas Relacionadas
+                </button>
+              </h2>
+              <div id="personasRel-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingFour">
+                <div class="accordion-body">
+
+                  <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Personas Relacionadas</label></strong> <input capitalize type="text"
+                        name="personaRelacionada"
+                        ng-change="dataRegistro.personasRelacionadas = dataRegistro.personasRelacionadas.toUpperCase()"
+                        class="form-control" maxlength="2" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta"
+                        [(ngModel)]="dataRegistro.personasRelacionadas" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.personaRelacionada">
+                          Solo acepta un tamaño de 18 caracteres</span>
+                        <span [hidden]="userForm.personaRelacionada" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Pólizas Relacionadas</label></strong> <input capitalize type="text"
+                        name="polizasRelacionadas"
+                        ng-change="dataRegistro.polizasRelacionadas = dataRegistro.polizasRelacionadas.toUpperCase()"
+                        class="form-control" maxlength="16" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta"
+                        [(ngModel)]="dataRegistro.polizasRelacionadas" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.polizasRelacionadas">
+                          Solo acepta un tamaño de 18 caracteres</span>
+                        <span [hidden]="userForm.polizasRelacionadas" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Clave del Sujeto Obligado</label></strong> <input capitalize type="text"
+                        name="claveSujetoObligado"
+                        ng-change="dataRegistro.claveSujetoObligado = dataRegistro.claveSujetoObligado.toUpperCase()"
+                        class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta" maxlength="6"
+                        [(ngModel)]="dataRegistro.claveSujetoObligado" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.claveSujetoObligado">
+                          Solo acepta un tamaño de 6 caracteres</span>
+                        <span [hidden]="userForm.claveSujetoObligado" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-lg-12 col-xs-12">
-                    <strong><label><span [hidden]="false" class="red-text">*</span>Razones por las que se
-                        considera inusual</label></strong>
-                    <textarea name="razones"
-                      ng-change="dataRegistro.razones = dataRegistro.razones.toUpperCase()"
-                      class="form-control" [required]="true" ng-pattern="regexTexbox"
-                      [disabled]="isConsulta" maxlength="3000" [(ngModel)]="dataRegistro.razones"
-                      autocomplete="off"></textarea>
-
-                    <div role="alert">
-                      <span class="error" [hidden]="userForm.razones" style="color:red">
-                        Solo acepta un tamaño de 300 caracteres</span>
-                      <span [hidden]="userForm.razones" style="color:red">
-                        Solo se aceptan letras, números y diagonal</span>
+                  <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Nombre Persona Relacionada</label></strong> <input capitalize type="text"
+                        name="nombrePersonaRelacionada"
+                        ng-change="dataRegistro.nombrePersonaRelacionada = dataRegistro.nombrePersonaRelacionada.toUpperCase()"
+                        class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta" maxlength="60"
+                        [(ngModel)]="dataRegistro.nombrePersonaRelacionada" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.nombrePersonaRelacionada">
+                          Solo acepta un tamaño de 18 caracteres</span>
+                        <span [hidden]="userForm.nombrePersonaRelacionada" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Apellido Paterno</label></strong> <input capitalize type="text" name="apPaRel"
+                        ng-change="dataRegistro.apellidoPaternoPersonaRelacionada = dataRegistro.apellidoPaternoPersonaRelacionada.toUpperCase()"
+                        class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta" maxlength="60"
+                        [(ngModel)]="dataRegistro.apellidoPaternoPersonaRelacionada" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.apPaRel">
+                          Solo acepta un tamaño de 18 caracteres</span>
+                        <span [hidden]="userForm.apPaRel" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xs-12">
+                      <strong><label>Apellido Materno</label></strong> <input capitalize type="text" name="apMaRel"
+                        ng-change="dataRegistro.apellidoMaternoPersonaRelacionada = dataRegistro.apellidoMaternoPersonaRelacionada.toUpperCase()"
+                        class="form-control" ng-pattern="regexAlphaNumeric" [disabled]="isConsulta" maxlength="30"
+                        [(ngModel)]="dataRegistro.apellidoMaternoPersonaRelacionada" autocomplete="off">
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.apMaRel">
+                          Solo acepta un tamaño de 18 caracteres</span>
+                        <span [hidden]="userForm.apMaRel" style="color:red">
+                          Solo se aceptan letras y números</span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
+            <!--*********************************************** DATOS DETALLE INUSUALIDAD	******************************************* -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="detalleInusual-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#detalleInusual-collapseThree" aria-expanded="false"
+                  aria-controls="detalleInusual-collapseThree">
+                  Detalle Inusualidad
+                </button>
+              </h2>
+              <div id="detalleInusual-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="detalleInusual-headingThree">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-lg-12 col-xs-12">
+                      <strong><label><span [hidden]="false" class="red-text">*</span>Descripción de la
+                          operación</label></strong>
+                      <textarea name="descripcionOperacion"
+                        ng-change="dataRegistro.descripcionOperacion = dataRegistro.descripcionOperacion.toUpperCase()"
+                        class="form-control" maxlength="3000" [required]="true" ng-pattern="regexTexbox"
+                        [disabled]="isConsulta" [(ngModel)]="dataRegistro.descripcionOperacion"
+                        autocomplete="off"></textarea>
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.descripcionOperacion" style="color:red">
+                          Solo acepta un tamaño de 300 caracteres</span>
+                        <span [hidden]="userForm.descripcionOperacion" style="color:red">
+                          Solo se aceptan letras, números y diagonal</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-xs-12">
+                      <strong><label><span [hidden]="false" class="red-text">*</span>Razones por las que se
+                          considera inusual</label></strong>
+                      <textarea name="razones" ng-change="dataRegistro.razones = dataRegistro.razones.toUpperCase()"
+                        class="form-control" [required]="true" ng-pattern="regexTexbox" [disabled]="isConsulta"
+                        maxlength="3000" [(ngModel)]="dataRegistro.razones" autocomplete="off"></textarea>
+
+                      <div role="alert">
+                        <span class="error" [hidden]="userForm.razones" style="color:red">
+                          Solo acepta un tamaño de 300 caracteres</span>
+                        <span [hidden]="userForm.razones" style="color:red">
+                          Solo se aceptan letras, números y diagonal</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <!--	END DATOS DETALLE INUSUALIDAD  -->
 
 
         </div><!--End panel group -->
-        <button type="submit" class="btn btn-info"
-          *ngIf="!isConsulta"> <i class="fa fa-check"></i> Guardar Registro</button>
+        <button type="submit" class="btn btn-info" *ngIf="!isConsulta"> <i class="fa fa-check"></i> Guardar
+          Registro</button>
         <button type="button" class="btn btn-info" (click)="showDialog()">
           <i class="fa fa-check"></i> Regresar</button>
       </form>
