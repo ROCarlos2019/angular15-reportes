@@ -14,6 +14,7 @@ import { ReportesComponent } from './components/reportes/reportes/reportes.compo
 import { FormularioReporteComponent } from './components/formulario/formulario-reporte/formularioReporte.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaReportesComponent } from './components/listaReportes/lista-reportes/lista-reportes.component';
+import { SeleccionReporteComponent } from './components/seleccion/seleccion-reporte/seleccion-reporte.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ListaReportesComponent } from './components/listaReportes/lista-reporte
     MainComponent,
     ReportesComponent,
     FormularioReporteComponent,
-    ListaReportesComponent
+    ListaReportesComponent,
+    SeleccionReporteComponent
   ],
   imports: [
     BrowserModule,

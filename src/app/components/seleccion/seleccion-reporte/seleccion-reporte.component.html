@@ -1,0 +1,132 @@
+<app-head></app-head>
+
+<div class="container-fluid">
+  <div class="white-container margin">
+    <div class="row">
+      <div class="col-lg-6 col-xs-12">
+        <div class="row">
+          <i class="fas fa-chart-line"></i> Reporte PLD&nbsp;
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Área:&nbsp;</strong><span> Compliance</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Rol:&nbsp;</strong><span> Compiliance </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blue-container"></div>
+  <div class="white-container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="row col-md-7">
+        <div class="col-md-3">
+          <label> <span class="red-text">*</span>Tipo Reporte :</label>
+        </div>
+        <div class="col-md-6">
+          <select class="form-control" ng-model="tipoReporte" ng-change="cambioTipoReporte()">
+            <option *ngFor="let tipo of tipoReporteSelect" value="{{tipo.descripcionCNFS}}">
+              {{tipo.descripcionCNFS}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="row col-md-7">
+        <div class="col-md-3">
+          <label> <span class="red-text">*</span>Órgano Supervisor :</label>
+        </div>
+        <div class="col-md-6">
+          <select class="form-control" ng-model="organoSupervisor">
+            <option *ngFor="let organo of organoSupervisorSelect" value="{{organo._id}}">
+              {{organo.descripcionCNFS}}</option>
+          </select>
+        </div>
+      </div>
+      <div class=" col-md-2"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="row col-md-7">
+        <div class="col-md-3">
+          <label><span class="red-text">*</span>Sujeto Obligado :</label>
+        </div>
+        <div class="col-md-6">
+          <select class="form-control" ng-model="sujetoObligado">
+            <option *ngFor="let sujeto of sujetoObligadoSelect" value="{{sujeto._id}}">{{sujeto.descripcionCNFS}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class=" col-md-2"></div>
+    </div>
+    <div ng-show="showRelevantes">
+      <br>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="row col-md-7">
+          <div class="col-md-3">
+            <label><span class="red-text">*</span>Año :</label>
+          </div>
+          <div class="col-md-6">
+            <select class="form-control" ng-model="ano">
+              <option *ngFor="let ano of anoSelect" value="{{ano._id}}">{{ano.ano}}</option>
+            </select>
+          </div>
+        </div>
+        <div class=" col-md-2"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="row col-md-7">
+          <div class="col-md-3">
+            <label><span class="red-text">*</span>Mes :</label>
+          </div>
+          <div class="col-md-6">
+            <select class="form-control" ng-model="mes">
+              <option *ngFor="let mes of mesSelect" value="{{mes._id}}">{{mes.mes}}</option>
+            </select>
+          </div>
+        </div>
+        <div class=" col-md-2"></div>
+      </div>
+    </div>
+
+
+    <br>
+    <div class="col-md-12 text-center">
+      <div class="ml-auto p-2  ">
+        <button type="button" class="btn btn-info" (click)="detalleReporte()"><i class="fa fa-check"></i>
+          Aceptar</button>
+        <button type="button" class="btn btn-info" (click)="salir()"><i class="fa fa-reply"></i> Salir</button>
+      </div>
+    </div>
+  </div><!--End continer white -->
+
+  <!--Modal cuadro de dialogo 	 -->
+  <div modal="showModal" close="close()" class="modalConfimacion ">
+    <div class="modal-header dialog-header-error">
+      <button type="button" class="close" (click)="ok()">×</button>
+      <h4 class="modal-title text-danger"><span class="glyphicon glyphicon-warning-sign"></span> Error</h4>
+    </div>
+    <div class="modal-body">
+      <p>Hola a todos</p>
+      <br>
+      <div class="botonesModal">
+        <button class="btn btn-success" (click)="ok()">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+</div>
