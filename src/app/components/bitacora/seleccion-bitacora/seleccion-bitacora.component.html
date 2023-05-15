@@ -1,0 +1,409 @@
+<app-head></app-head>
+
+<!-- INICIO MAIN -->
+<div class="container-fluid">
+  <div class="white-container margin">
+    <div class="row">
+      <div class="col-lg-6 col-xs-12">
+        <div class="row">
+          <i class="fas fa-chart-line"></i> Consultas > Consulta Bitácora&nbsp;
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Área:&nbsp;</strong><span> Compliance</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Rol:&nbsp;</strong><span> Compliance </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blue-container"></div>
+
+  <div class="white-container">
+
+    <div class="div-border" ng-show="divBusq">
+
+      <form action="" modelAttribute="consultbitacora">
+        <div class="row ">
+          <div class="col-lg-12 col-xs-12">
+            <label>Tipo Bitácora </label>
+          </div>
+        </div>
+
+        <div class="row ">
+          <div class="col-lg-12 col-xs-12">
+            <label>Folio Reporte </label>
+            <input [(ngModel)]="folio" type="number" id="rfolio" ng-disabled="hide"
+              class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+          </div>
+        </div>
+
+
+
+        <div class="row ">
+          <div class="col-lg-12 col-xs-12">
+            <label>Estatus Reporte </label>
+
+            <select id="status" name="status" class="form-control" [(ngModel)]="status" ng-disabled="hide">
+              <option *ngFor="let tipo of estatusReporteSelect" value="{{tipo.claveCNFS}}">
+                {{tipo.descripcionCNFS}}</option>
+            </select>
+
+          </div>
+        </div>
+
+
+
+        <label>Periodo Creación Reporte</label>
+        <div class="row ">
+
+
+          <div class="col-md-6 ">
+            <p class="input-group">
+              <input type="text" class="form-control" readOnly name="fechaOperacion" placeholder="yyyy-mm-dd"
+                uib-datepicker-popup="yyyy-MM-dd" ng-required="true" uib-datepicker-popup [(ngModel)]="dt"
+                is-open="popup2.opened" datepicker-options="dateOptions2" close-text="Cerrar" current-text="Hoy"
+                clear-text="Limpiar" /> <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open2(1)">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </p>
+
+          </div>
+
+          <div class="col-md-6 ">
+
+            <p class="input-group">
+              <input type="text" class="form-control" readOnly name="fechaOperacion" placeholder="yyyy-mm-dd"
+                uib-datepicker-popup="yyyy-MM-dd" ng-required="true" uib-datepicker-popup [(ngModel)]="dt1"
+                is-open="popup3.opened" datepicker-options="dateOptions" close-text="Cerrar" current-text="Hoy"
+                clear-text="Limpiar" /> <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open2(2)">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </p>
+
+          </div>
+
+        </div>
+        <div class="row ">
+          <div class="col-lg-12 col-xs-12">
+            <button type="button" ng-click="submitBusqeda()" class="btn btn-info"><i class="fa fa-search"></i>
+              Buscar</button>
+            <button type="button" class="btn btn-info" ng-click="salir()"><i class="fa fa-reply"></i>
+              Salir</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div id="table_reportes" class="div-table" ng-show="tReportes">
+      <div class="row col-12">
+        <div>
+          Total registros: {{totalRecord}}
+        </div>
+        <div class="ml-auto p-2  ">
+          <button type="button" ng-click="download()" class="btn btn-info"><i class="fa fa-table "></i>
+            Exportar</button>
+        </div>
+      </div>
+      <div class="ng-table-scrollcontainer">
+        <table ng-table="tableParams" class="responsive table table-striped table-bordered" style="width:100%"
+          show-filter="true">
+          <thead>
+            <tr>
+              <th>FOLIO DEL REPORTE
+              </th>
+              <th>TIPO DE REPORTE
+              </th>
+              <th>CLASIFICACIÓN REPORTE
+              </th>
+              <th>NOMBRE DEL REPORTE
+              </th>
+              <th>NOMBRE DEL ARCHIVO
+              </th>
+              <th>CLAVE DE USUARIO
+              </th>
+              <th>NOMBRE DE USUARIO
+              </th>
+              <th>FECHA Y HORA REGISTRO
+              </th>
+              <th>ACTIVIDAD
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of data">
+              <td>{{ row.folioReporte }}</td>
+              <td>{{ row.tipoReporte}}</td>
+              <td>{{ row.clasificacionReporte}} </td>
+              <td>{{ row.nombreReporte }}</td>
+              <td>{{ row.nombreArchivo }}</td>
+              <td>{{ row.usuario }}</td>
+              <td>{{ row.nombreUsuario }}</td>
+              <td>{{ row.fechaHora | date:'dd-MM-yyyy h:mma '}}</td>
+              <td>{{ row.actividad }}</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+      <div class="ml-auto p-2  ">
+        <button type="button" ng-click="retorno()" class="btn btn-info"><i class="fa "></i> Regresar</button>
+      </div>
+    </div>
+
+
+    <div id="table_movreportes" class="div-table" ng-show="tMovreportes">
+      <div class="row col-12">
+        <div>
+          Total registros: {{totalRecord}}
+        </div>
+        <div class="ml-auto p-2  ">
+          <button type="button" ng-click="download()" class="btn btn-info"><i class="fa fa-table "></i>
+            Exportar</button>
+        </div>
+      </div>
+      <div class="ng-table-scrollcontainer">
+        <table ng-table="tableParams" class="responsive table table-striped table-bordered" style="width:100%"
+          show-filter="true">
+          <thead>
+            <tr>
+              <th>FOLIO DEL REPORTE
+              </th>
+              <th>TIPO DE REPORTE
+              </th>
+              <th>CLASIFICACION REPORTE
+              </th>
+              <th>NOMBRE DEL REPORTE
+              </th>
+              <th>NOMBRE DEL ARCHIVO
+              </th>
+              <th>CLAVE DE USUARIO
+              </th>
+              <th>NOMBRE DE USUARIO
+              </th>
+              <th>FECHA Y HORA REGISTRO
+              </th>
+              <th>ACTIVIDAD
+              </th>
+              <th>CAMPO MODIFICADO
+              </th>
+              <th>VALOR ORIGINAL
+              </th>
+              <th>VALOR FINAL
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row in data">
+              <td>{{ row.folioReporte }}</td>
+              <td>{{ row.tipoReporte}}</td>
+              <td>{{ row.clasificacionReporte}} </td>
+              <td>{{ row.nombreReporte }}</td>
+              <td>{{ row.nombreArchivo }}</td>
+              <td>{{ row.usuario }}</td>
+              <td>{{ row.nombreUsuario }}</td>
+              <td>{{ row.fechaHora | date:'dd-MM-yyyy h:mma '}}</td>
+              <td>{{ row.actividad }}</td>
+              <td>{{ row.campoModificado }}</td>
+              <td>{{ row.valorOriginal }}</td>
+              <td>{{ row.valorFinal }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ml-auto p-2  ">
+        <button type="button" ng-click="retorno()" class="btn btn-info"><i class="fa "></i> Regresar</button>
+      </div>
+    </div>
+
+
+    <div id="table_clientes" class="div-table" ng-show="tClientes">
+      <div class="row col-12">
+        <div>
+          Total registros: {{totalRecord}}
+        </div>
+        <div class="ml-auto p-2  ">
+          <button type="button" ng-click="download()" class="btn btn-info"><i class="fa fa-table "></i>
+            Exportar</button>
+        </div>
+      </div>
+      <div class="ng-table-scrollcontainer">
+        <table ng-table="tableParams" class="responsive table table-striped table-bordered" style="width:100%"
+          show-filter="true">
+          <thead>
+            <tr>
+              <th>TIPO DE CONSULTA
+              </th>
+              <th>CLAVE DEL USUARIO
+              </th>
+              <th>NOMBRE DEL USUARIO
+              </th>
+              <th>FECHA Y HORA DE REGISTRO
+              </th>
+              <th>TOTAL DE REGISTROS
+              </th>
+              <th>TIPO PERSONA
+              </th>
+              <th>NOMBRE
+              </th>
+              <th>A.PATERNO
+              </th>
+              <th>A.MATERNO
+              </th>
+              <th>RFC
+              </th>
+              <th>ID CLIENTE
+              </th>
+              <th>POLIZA
+              </th>
+              <th>FEC. NACIMIENTO
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of data">
+              <td>{{ row.tipoConsulta }}</td>
+              <td>{{ row.usuario}}</td>
+              <td>{{ row.nombreUsuario}} </td>
+              <td>{{ row.fechaHora | date:'dd-MM-yyyy h:mma '}}</td>
+              <td>{{ row.totalRegistros }}</td>
+              <td>{{ row.tipoPersona }}</td>
+              <td>{{ row.nombre }}</td>
+              <td>{{ row.apellidoPaterno }}</td>
+              <td>{{ row.apellidoMaterno }}</td>
+              <td>{{ row.rfc }}</td>
+              <td>{{ row.idClienteUnico }}</td>
+              <td>{{ row.poliza }}</td>
+              <td>{{ row.fechaNacimiento }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ml-auto p-2  ">
+        <button type="button" ng-click="retorno()" class="btn btn-info"><i class="fa "></i> Regresar</button>
+      </div>
+    </div>
+
+
+
+    <div id="table_ondemand" class="div-table" ng-show="tOndemand">
+      <div class="row col-12">
+        <div>
+          Total registros: {{totalRecord}}
+        </div>
+        <div class="ml-auto p-2  ">
+          <button type="button" ng-click="download()" class="btn btn-info"><i class="fa fa-table "></i>
+            Exportar</button>
+        </div>
+      </div>
+      <div class="ng-table-scrollcontainer">
+        <table ng-table="tableParams" class="responsive table table-striped table-bordered" style="width:100%"
+          show-filter="true">
+          <thead>
+            <tr>
+              <th>TIPO DE CONSULTA
+              </th>
+              <th>CLAVE DEL USUARIO
+              </th>
+              <th>NOMBRE DEL USUARIO
+              </th>
+              <th>FECHA Y HORA DE REGISTRO
+              </th>
+              <th>TOTAL DE REGISTROS
+              </th>
+              <th>TIPO DE PERSONA
+              </th>
+              <th>POLIZA
+              </th>
+              <th>RFC
+              </th>
+              <th>NOMBRE
+              </th>
+              <th>A.PATERNO
+              </th>
+              <th>A.MATERNO
+              </th>
+              <th>FEC. NACIMIENTO
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of data">
+              <td>{{ row.tipoConsulta }}</td>
+              <td>{{ row.usuario}}</td>
+              <td>{{ row.nombreUsuario}} </td>
+              <td>{{ row.fechaHora | date:'dd-MM-yyyy h:mma '}}</td>
+              <td>{{ row.totalRegistros }}</td>
+              <td>{{ row.tipoPersona }}</td>
+              <td>{{ row.poliza }}</td>
+              <td>{{ row.rfc }}</td>
+              <td>{{ row.nombre }}</td>
+              <td>{{ row.apellidoPaterno }}</td>
+              <td>{{ row.apellidoMaterno }}</td>
+              <td>{{ row.fechaNacimiento }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ml-auto p-2  ">
+        <button type="button" ng-click="retorno()" class="btn btn-info"><i class="fa "></i> Regresar</button>
+      </div>
+    </div>
+
+    <div id="processing" style="display: none">
+      <img class="ajax-loader" src="/resources/img/ajax-loader.gif">
+    </div>
+
+  </div>
+  <!-- FIN MAIN -->
+
+  <!--Modal cuadro de dialogo Error 	 -->
+  <div modal="showModal2" close="close()" class="modalConfimacion ">
+    <div class="modal-header dialog-header-error">
+      <button type="button" class="close">×</button>
+      <h5 class="modal-title "><span class="glyphicon glyphicon-warning-sign"></span> Error </h5>
+    </div>
+    <div class="modal-body">
+      <strong>
+        <p>mensaje</p>
+      </strong>
+      <div class="botonesModal">
+        <button ng-show="showOk" class="btn btn-success" ng-click="ok()">Aceptar</button>
+        <button ng-show="showCancel" id="btnCancelar" class="btn btn-success" ng-click="cancel()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div modal="showModal" close="close()" id="modal" class="modal" tabindex="-1" role="dialog" data-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" ng-click="cancel()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5 class="modal-title">Notificación</h5>
+        </div>
+        <div class="modal-body">
+          <p>Hola a todos</p>
+          <button type="button" ng-show="showExportar" ng-click="download()" class="btn btn-info"><i
+              class="fa fa-table "></i> Exportar Todos ({{totalRecord}})</button>
+        </div>
+        <div class="modal-footer">
+          <button ng-show="showOk" class="btn btn-success" ng-click="ok()">Aceptar</button>
+          <button ng-show="showCancel" id="btnCancel" class="btn btn-success" ng-click="cancel()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>

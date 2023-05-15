@@ -15,6 +15,7 @@ import { FormularioReporteComponent } from './components/formulario/formulario-r
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaReportesComponent } from './components/listaReportes/lista-reportes/lista-reportes.component';
 import { SeleccionReporteComponent } from './components/seleccion/seleccion-reporte/seleccion-reporte.component';
+import { SeleccionBitacoraComponent } from './components/bitacora/seleccion-bitacora/seleccion-bitacora.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SeleccionReporteComponent } from './components/seleccion/seleccion-repo
     ReportesComponent,
     FormularioReporteComponent,
     ListaReportesComponent,
-    SeleccionReporteComponent
+    SeleccionReporteComponent,
+    SeleccionBitacoraComponent
   ],
   imports: [
     BrowserModule,
