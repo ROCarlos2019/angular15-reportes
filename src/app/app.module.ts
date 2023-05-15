@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaReportesComponent } from './components/listaReportes/lista-reportes/lista-reportes.component';
 import { SeleccionReporteComponent } from './components/seleccion/seleccion-reporte/seleccion-reporte.component';
 import { SeleccionBitacoraComponent } from './components/bitacora/seleccion-bitacora/seleccion-bitacora.component';
+import { ModalComponent } from './shared/modal/modal/modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,16 @@ import { SeleccionBitacoraComponent } from './components/bitacora/seleccion-bita
     FormularioReporteComponent,
     ListaReportesComponent,
     SeleccionReporteComponent,
-    SeleccionBitacoraComponent
+    SeleccionBitacoraComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [ExportFileService],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ModalComponent } from 'src/app/shared/modal/modal/modal.component';
 
 @Component({
   selector: 'app-formularioReporte',
@@ -6,6 +7,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./formularioReporte.component.scss']
 })
 export class FormularioReporteComponent {
+
+  /**
+   * Variable declaradas para el llamado al modal
+   *
+   * @private
+   * @type {ModalComponent}
+   * @memberof FormularioReporteComponent
+   */
+  @ViewChild('confirmationModal')
+  private modalComponent!: ModalComponent;
+  modalStyle: string = 'modal-style-success';
+  modalTitle: string = 'Success Confirmation';
+  modalBody: string = 'This is a Information Confirmation message';
+  modalButtonColor: string = 'btn-success';
+
+  async openModal() {
+    return await this.modalComponent.open();
+  }
+
+  getConfirmationValue(value: any) {
+    if (value == 'Save click') {
+      console.log(value);
+    }
+  }
+
+  open() {
+    this.openModal();
+  }
+
   cancelError() {
     throw new Error('Method not implemented.');
   }
@@ -39,37 +69,37 @@ export class FormularioReporteComponent {
     { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ];
   sujetoObligadoSelect = [
-    { id: '0', descripcion: 'descripcion'}
+    { id: '0', descripcion: 'descripcion' }
   ];
   localidadEstadoSelect = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ];
   localidadSelect = [
-    { id: '0', descripcionSecundariaCNFS: 'descripcionSecundariaCNFS'}
+    { id: '0', descripcionSecundariaCNFS: 'descripcionSecundariaCNFS' }
   ];
   tipoOperacionSelect = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ]
   instrumentoMonetarioSelect = [
-    { id: 0, descripcionCNFS: 'descripcionCNFS'}
+    { id: 0, descripcionCNFS: 'descripcionCNFS' }
   ]
   tipoMonedaSelect = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ]
   nacionalidadSelect = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ]
   tipoPersonaSelect = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ]
   actividadEconomicaSelect = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ]
   tipoMonedaSelect4 = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ]
   tipoMonedaSelect5 = [
-    { id: '0', descripcionCNFS: 'descripcionCNFS'}
+    { id: '0', descripcionCNFS: 'descripcionCNFS' }
   ]
 
   dataRegistro = {

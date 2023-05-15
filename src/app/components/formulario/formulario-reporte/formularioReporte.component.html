@@ -930,3 +930,16 @@
     </div>
   </div>
 </main>
+
+
+<!-- Button example modal with @ng-bootstrap -->
+
+<button class="btn btn-lg btn-outline-primary" (click)="open()">
+  Launch Confirmation Modal
+</button>
+
+<app-modal #confirmationModal (newConfirmationEvent)="getConfirmationValue($event)" [modalStyle]="modalStyle"
+[modalTitle]="modalTitle"
+[modalBody]="modalBody"
+[modalButtonColor]="modalButtonColor">
+</app-modal>
