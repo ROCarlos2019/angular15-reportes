@@ -18,6 +18,7 @@ import { SeleccionReporteComponent } from './components/seleccion/seleccion-repo
 import { SeleccionBitacoraComponent } from './components/bitacora/seleccion-bitacora/seleccion-bitacora.component';
 import { ModalComponent } from './shared/modal/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListaCatalogoComponent } from './components/listaCatalogo/lista-catalogo/lista-catalogo.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ListaReportesComponent,
     SeleccionReporteComponent,
     SeleccionBitacoraComponent,
-    ModalComponent
+    ModalComponent,
+    ListaCatalogoComponent
   ],
   imports: [
     BrowserModule,

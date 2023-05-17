@@ -1,0 +1,402 @@
+<app-head></app-head>
+
+<!-- INICIO MAIN -->
+<main>
+  <div class="container-fluid">
+    <div class="white-container margin">
+      <div class="row">
+        <div class="col-lg-6 col-xs-12">
+          <div class="row">
+            <i class="fas fa-chart-line"></i> Administración de Catálogos > titulo &nbsp;
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-12">
+          <div class="row">
+            <strong>Área:&nbsp;</strong><span> Compliance</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-12">
+          <div class="row">
+            <strong>Rol:&nbsp;</strong><span> {{user.rol}} </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blue-container"></div>
+    <div class="white-container">
+      <div class="row">
+        <div class="col-lg-10 col-xs-12">
+
+          <div class="ng-table">
+            <table ng-table="tableParams" class="table table-condensed table-bordered table-striped"
+              show-filter="false">
+              <tr *ngFor="let datos of $data">
+                <td title="" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  <input type="checkbox" ng_model="datos.checked" ng-checked="datos.checked" value="{{datos.claveCNFS}}"
+                    (click)="edit()" />
+                </td>
+
+                <td title="'CLAVE CATÁLOGO'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  {{datos.claveCNFS}}</td>
+                <td title="'DESCRIPCIÓN'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  {{datos.descripcionCNFS}}</td>
+
+                <td ng-if="column3" title="'DETALLE'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  {{datos.descripcionSecundariaCNFS}}</td>
+              </tr>
+              <tr ng-show="!$data.length">
+                <td colspan=4 class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn"
+                  style="text-align: center">
+                  No hay Datos</td>
+              </tr>
+            </table>
+          </div><!--END TABLE -->
+        </div>
+        <div class="col-lg-2 col-xs-12">
+          <div ng-if="cargArchivo" class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" (click)="showUpload()" class="btn btn-info"> <i class="fa fa-arrow-up"></i>Carga
+                  Masiva</button>
+              </div>
+            </div>
+          </div>
+          <div ng-if="butonAlta" class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" (click)="dialog(1)" class="btn btn-info"> <i
+                    class="fa fa-arrow-up"></i>Alta</button>
+              </div>
+            </div>
+          </div>
+
+          <div ng-if="butonDelete" class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" (click)="showDialog()" class="btn btn-info"><i
+                    class="fa fa-arrow-down"></i>Baja</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" (click)="dialog(2)" class="btn btn-info"><i
+                    class="fa fa-edit"></i>Modificación</button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <div class="ml-auto p-2  ">
+          <button type="button" class="btn btn-info" (click)="salir()"><i class="fa fa-reply"></i> Salir</button>
+        </div>
+      </div>
+
+      <div id="processingGeneral" style="display: none">
+        <img class="ajax-loader-gen" src="/resources/img/ajax-loader.gif">
+      </div>
+    </div><!--End continer white -->
+  </div>
+
+
+  <!--Modal cuadro de dialogo 	 -->
+  <div modal="showModal_error" close="close()" class="modalConfimacion ">
+    <div class="modal-header dialog-header-error">
+      <h5 class="modal-title "><span class="glyphicon glyphicon-warning-sign"></span> ERROR</h5>
+      <button type="button" class="close" (click)="okError()">×</button>
+    </div>
+    <div class="modal-body">
+      <strong>
+        <p>{{msj}}</p>
+      </strong>
+      <div class="botonesModal">
+        <button class="btn btn-success" (click)="okError()">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Modal cuadro de dialogo 	 -->
+  <div modal="showModalUpdate" close="close()" class="modalConfimacion">
+    <div class="modal-header ">
+      <button type="button" class="close" (click)="okUpdate()">×</button>
+      <h5 class="modal-title "><span class="glyphicon glyphicon-warning-sign"></span> Info</h5>
+    </div>
+    <div class="modal-body">
+      <strong>
+        <p>{{msj}}</p>
+      </strong>
+      <div class="botonesModal">
+        <button class="btn btn-success" (click)="ejecutar(userForm.$valid)">Aceptar</button>
+        <button ng-show="showCancel" id="btnCancel" class="btn btn-success" (click)="okUpdate()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal cuadro de dialogo Error 	 -->
+  <div modal="showModal2" close="close()" class="modalConfimacion ">
+    <div class="modal-header dialog-header-error">
+      <button type="button" class="close" (click)="ok()">×</button>
+      <h5 class="modal-title "><span class="glyphicon glyphicon-warning-sign"></span> Error</h5>
+    </div>
+    <div class="modal-body">
+      <strong>
+        <p ng-bind-html="msj"></p>
+      </strong>
+      <div class="botonesModal">
+        <button ng-show="showDel" class="btn btn-success" (click)="delete()">Borrar</button>
+        <button ng-show="showOk2" class="btn btn-success" (click)="ok()">Aceptar</button>
+        <button ng-show="showCancel2" id="btnCancel" class="btn btn-success" (click)="ok()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Modal cuadro de dialogo 	 -->
+  <div modal="showModal3" close="close()" class="modalConfimacion">
+    <div class="modal-header ">
+      <button type="button" class="close" (click)="ok3()">×</button>
+      <h5 class="modal-title "><span class="glyphicon glyphicon-warning-sign"></span> Info</h5>
+    </div>
+    <div class="modal-body">
+      <strong>
+        <p>{{msj}}</p>
+      </strong>
+      <div class="botonesModal">
+        <button class="btn btn-success" (click)="ok3()">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal Info 	 -->
+  <div modal="showModal4" close="close()" class="modalConfimacion ">
+    <div class="modal-header">
+      <button type="button" class="close" (click)="ok()">×</button>
+      <h5 class="modal-title "><span class="glyphicon glyphicon-warning-sign"></span> Info</h5>
+    </div>
+    <div class="modal-body">
+      <strong>
+        <p>{{msj}}</p>
+      </strong>
+      <div class="botonesModal">
+        <button ng-show="showDel" class="btn btn-success" (click)="delete()">Borrar</button>
+        <button ng-show="showDelCancel" id="btnDelCancel" class="btn btn-success" (click)="ok()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal Carga Massiva 	 -->
+  <div modal="showCargaMassiva" close="close()" id="modal" class="modal" tabindex="-1" role="dialog"
+    data-backdrop="false">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+      <div class="modal-content">
+        <div id="processing" style="display: none">
+          <img class="ajax-loader" src="/resources/img/ajax-loader.gif">
+        </div>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" (click)="okC()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5 class="modal-title text-inf">Carga Masiva</h5>
+        </div>
+        <form name="FormFile">
+          <div class="modal-body">
+            <div class="row ">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label>*Archivo :
+                  </label>
+                </strong>
+                <input type="file" ng-model="file3"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                  name="uploadFileInput" id="uploadFileInput" ng-required="true"
+                  ng-upload-change="changeCargaMFile($event)"
+                  class="form-control ng-valid ng-isolate-scope ng-not-empty  ng-valid-required" valid-file>
+                <span class="error" ng-show="FormFile.$invalid" style="color:red">Archivo es requerido. </span>
+                <span class="error" ng-show="erroExt" style="color:red">Solo se permite archivos con extensión
+                  (*.xls,*.xlsx) </span>
+                <span class="error" ng-show="erroSize" style="color:red">No se permite archivos superiores a 10mb
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btnCancel" class="btn btn-success" (click)="okC()">Cancelar</button>
+
+            <button class="btn btn-success" (click)="uploadFile()"
+              ng-disabled="FormFile.$invalid || erroExt || erroSize ">Aceptar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal cuadro de dialogo 	 -->
+  <div modal="showModal" close="close()" id="modal" class="modal" tabindex="-1" role="dialog" data-backdrop="false">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+      <div class="modal-content">
+        <div id="processing" style="display: none">
+          <img class="ajax-loader" src="/resources/img/ajax-loader.gif">
+        </div>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" (click)="cancel()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5 class="modal-title text-inf">{{ mensaje }}</h5>
+        </div>
+        <form name="userForm">
+          <div class="modal-body">
+            <div class="row" ng-if="mensajeAlta  && showOk">
+              <div class="col-lg-12 col-xs-12">
+                <strong style="color:red;text-align:center"> -Si da de alta el registro, deberá contactar a su área de
+                  soporte de TI para que le apoyen a implementar una nueva funcionalidad. </strong>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label><span class="red-text">*</span>Clave Catálogo : </label> </strong>
+                <input ng-model="object.claveCNFS" name="claveCNFS" ng-pattern="regexAlphaNumeric"
+                  ng-change="object.claveCNFS = object.claveCNFS.toUpperCase();erroClave=false " id="claveCNFS"
+                  autocomplete="off" ng-required="true" autocomplete="off" ng-minlength="1" maxlength="10"
+                  ng-maxlength="10" ng-readonly="readOnly"
+                  class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+                <div role="alert">
+                  <span class="error" ng-show="userForm.claveCNFS.$error.maxlength" style="color:red">
+                    Solo acepta un tamaño máximo de 10 caracteres</span>
+                  <span class="error" ng-show="userForm.claveCNFS.$error.minlength" style="color:red">
+                    Solo acepta un minimo de 1 caracter</span>
+                  <span ng-show="userForm.claveCNFS.$error.pattern" style="color:red">
+                    Solo se aceptan letras y números</span>
+                  <span class="error" ng-show="erroClave" style="color:red">
+                    La clave ya existe en el catálogo </span>
+                </div>
+              </div>
+            </div>
+            <div class="row" ng-if="!delFolio">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label><span class="red-text">*</span>Descripción : </label></strong>
+                <input name="descripcionCNFS" ng-maxlength="70" ng-model="object.descripcionCNFS" id="descripcionCNFS"
+                  ng-pattern="regexAlphaNumericDetalle" autocomplete="off" ng-readonly="readOnlyDesc" ng-required="true"
+                  maxlength="70"
+                  class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+                <div role="alert">
+                  <span class="error" ng-show="userForm.descripcionCNFS.$error.maxlength" style="color:red">
+                    Solo acepta un tamaño máximo de 70 caracteres</span>
+                  <span ng-show="userForm.descripcionCNFS.$error.pattern" style="color:red">
+                    Solo se aceptan punto, paréntesis , comas , letras y números</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row" ng-if="delFolio">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label><span class="red-text">*</span>Descripción : </label></strong>
+                <select id="descripcionCNFS" name="descripcionCNFS" class="form-control"
+                  ng-model="object.descripcionCNFS">
+                  <option *ngFor="let tipo of tipodelSelect" value="{{tipo.id}}">{{tipo.desc}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row " ng-if="campo3 && nombreReporte !== 'deleteReportes'">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label><span class="red-text">*</span>Detalle : </label></strong>
+                <input name="descripcionSecundariaCNFS" ng-pattern="regexAlphaNumericDetalle" autocomplete="off"
+                  ng-maxlength="70" ng-model="object.descripcionSecundariaCNFS" id="descripcionSecundariaCNFS"
+                  maxlength="70" autocomplete="off" ng-required="true"
+                  class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+                <div role="alert">
+                  <span class="error" ng-show="userForm.descripcionSecundariaCNFS.$error.maxlength" style="color:red">
+                    Solo acepta un tamaño de 70 caracteres.</span>
+                  <span ng-show="userForm.descripcionSecundariaCNFS.$error.pattern" style="color:red">
+                    Solo se aceptan punto, paréntesis , comas , letras y números</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row " ng-if="campo3 && nombreReporte === 'deleteReportes'">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label><span class="red-text">*</span>Detalle : </label></strong>
+                <input name="descripcionSecundariaCNFS" ng-pattern="regexDeleteReportesDias" autocomplete="off"
+                  ng-maxlength="70" ng-model="object.descripcionSecundariaCNFS" id="descripcionSecundariaCNFS"
+                  maxlength="70" autocomplete="off" ng-required="true"
+                  class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+                <div role="alert">
+                  <span class="error" ng-show="userForm.descripcionSecundariaCNFS.$error.maxlength" style="color:red">
+                    Solo acepta un tamaño de 70 caracteres.</span>
+                  <span ng-show="userForm.descripcionSecundariaCNFS.$error.pattern" style="color:red">
+                    Solo se aceptan dos números separados por comas</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row " ng-if="campoFileUpdate">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label>Llave : <input name="descripcionCNFS" ng-model="object.descripcionSecundariaCNFS"
+                      style="width:400px" id="descripcionSecundariaCNFS" required readonly autocomplete="off"
+                      ng-required="true" class="form-control  ng-valid-required">
+                  </label>
+                </strong>
+                <input type="file" name="myfile" ng-model="file" id="myfile" ng-upload-change="changeFile($event)"
+                  accept=".asc" class="form-control ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+              </div>
+            </div>
+
+            <div class="row " ng-if="campoFileInsert">
+              <div class="col-lg-12 col-xs-12">
+                <strong><label>*Llave : <input name="descripcionCNFS" type="hidden"
+                      ng-model="object.descripcionSecundariaCNFS" style="width:400px" id="descripcionSecundariaCNFS"
+                      required readonly autocomplete="off" ng-required="true" class="form-control  ng-valid-required">
+                  </label>
+                </strong>
+                <input type="file" name="myfile" ng-required="true" ng-model="file" id="myfile" required
+                  ng-upload-change="changeFile($event)" accept=".asc"
+                  class="form-control ng-valid ng-isolate-scope ng-not-empty  ng-valid-required" valid-file>
+                <span class="error" ng-show="(userForm.$invalid && !erroExt && (file==null))" style="color:red">Archivo
+                  es requerido. </span>
+                <span class="error" ng-show="erroExt" style="color:red">Solo se permite archivos con extensión (*.ASC)
+                </span>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button ng-show="showCancel" id="btnCancel" class="btn btn-success" (click)="cancel()">Cancelar</button>
+
+            <button type="submit" ng-show="showUpdateFile" class="btn btn-success" ng-disabled="userForm.$invalid"
+              (click)="regActualizar(2,userForm.$valid)">Actualizar</button>
+            <button type="submit" ng-show="showUpdate" class="btn btn-success"
+              (click)="regActualizar(1,userForm.$valid)" ng-disabled="userForm.$invalid">Actualizar</button>
+            <button ng-show="showOk" class="btn btn-success" (click)="aceptar(userForm.$valid)"
+              ng-disabled="userForm.$invalid">Aceptar</button>
+            <button ng-show="showInsertFile" class="btn btn-success" (click)="insertarFile(userForm.$valid)"
+              ng-disabled="userForm.$invalid">Aceptar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="processingFile" style="display: none">
+    <img class="ajax-loader" src="/resources/img/ajax-loader.gif">
+  </div>
+
+
+</main>
+<!-- FIN MAIN -->
