@@ -1,0 +1,299 @@
+<app-head></app-head>
+
+<div class="container-fluid">
+  <div class="white-container margin">
+    <div class="row">
+      <div class="col-lg-6 col-xs-12">
+        <div class="row">
+          <i class="fas fa-chart-line"></i> Administrador de Reportes > Gestor de Reportes&nbsp;
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Área:&nbsp;</strong><span> Compliance</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="row">
+          <strong>Rol:&nbsp;</strong><span> {{user.rol}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blue-container"></div>
+
+  <div class="white-container">
+    <div id="table_transaccion" ng-show="polizaTabla">
+      <form name="userForm">
+
+        <div class="row spacio">
+          <div class="col-md-3"></div>
+          <div class="row col-md-7">
+            <div class="col-md-3">
+              <label> Folio :</label>
+            </div>
+            <div class="col-md-6">
+              <input [(ngModel)]="object.folioReporte" name="folioReporte" ng-pattern="regexNumber" id="folioReporte"
+                autocomplete="off" ng-minlength="1" maxlength="20" ng-maxlength="20" ng-readonly="folioReporte.readOnly"
+                class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+              <div role="alert">
+                <span class="error" ng-show="userForm.folioReporte.$error.maxlength" style="color:red">
+                  Solo acepta un tamaño máximo de 20 caracteres</span>
+                <span class="error" ng-show="userForm.folioReporte.$error.minlength" style="color:red">
+                  Solo acepta un minimo de 1 caracter</span>
+                <span ng-show="userForm.folioReporte.$error.pattern" style="color:red">
+                  Solo se aceptan números</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+
+        <div class="row spacio">
+          <div class="col-md-3"></div>
+          <div class="row col-md-7">
+            <div class="col-md-3">
+              <label> Tipo de Reporte :</label>
+            </div>
+            <div class="col-md-6">
+              <select id="tipoReportes" name="tipoReportes" class="form-control" [(ngModel)]="object.tipoReporte">
+                <option *ngFor="let tipo of tipoReporteSelect" value="{{tipo.descripcionCNFS}}">
+                  {{tipo.descripcionCNFS}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+
+        </div>
+
+
+
+        <div class="row spacio">
+          <div class="col-md-3"></div>
+          <div class="row col-md-7">
+            <div class="col-md-3">
+              <label> Clasific. Reporte:</label>
+            </div>
+            <div class="col-md-6">
+              <select name="classReportes" id="classReportes" class="form-control" [(ngModel)]="object.classReporte">
+                <option value="">Seleccione un valor</option>
+                <option *ngFor="let tipo of clasificacion" value="{{tipo.name}}">{{tipo.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+
+        <div class="row spacio">
+          <div class="col-md-3"></div>
+          <div class="row col-md-7">
+            <div class="col-md-3" style="padding-right: 0;">
+              <label>Fechas :</label>
+            </div>
+            <div class="col-md-6">
+
+              <div class="">
+                <p class="input-group">
+                  <input type="text" class="form-control" readOnly name="fechaOperacion" placeholder="yyyy-MM-dd"
+                    uib-datepicker-popup="yyyy-MM-dd" uib-datepicker-popup [(ngModel)]="object.fechaIni"
+                    is-open="popup2.opened" datepicker-options="dateOptions2" close-text="Cerrar" current-text="Hoy"
+                    clear-text="Limpiar" /> <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open2(1)">
+                      <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                  </span>
+                </p>
+
+              </div>
+              <div style="margin-top: -15px;">
+                al
+              </div>
+              <div class="">
+
+                <p class="input-group">
+                  <input type="text" class="form-control" readOnly name="fechaOperacion" placeholder="yyyy-MM-dd"
+                    uib-datepicker-popup="yyyy-MM-dd" uib-datepicker-popup [(ngModel)]="object.fechaFin"
+                    is-open="popup3.opened" datepicker-options="dateOptions" close-text="Cerrar" current-text="Hoy"
+                    clear-text="Limpiar" /> <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open2(2)">
+                      <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                  </span>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+        <div class="row spacio">
+          <div class="col-md-3"></div>
+          <div class="row col-md-7">
+            <div class="col-md-3">
+              <label> Estatus :</label>
+            </div>
+            <div class="col-md-6">
+              <select id="estatusReportes" name="estatusReportes" class="form-control" [(ngModel)]="object.estatusReporte">
+                <option *ngFor="let tipo of estatusReporteSelect" value="{{tipo.claveCNFS}}">
+                  {{tipo.descripcionCNFS}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+
+        <div class="row spacio">
+          <div class="col-md-3"></div>
+          <div class="row col-md-7">
+            <div class="col-md-3">
+              <label> Folio CNSF :</label>
+            </div>
+            <div class="col-md-6">
+              <input [(ngModel)]="object.folioCNSF" name="folioCNSF" ng-pattern="regexFolio" id="folioCNSF"
+                autocomplete="off" ng-minlength="1" maxlength="20" ng-maxlength="20" ng-readonly="folioCNSF.readOnly"
+                class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty  ng-valid-required">
+              <div role="alert">
+                <span class="error" ng-show="userForm.folioCNSF.$error.maxlength" style="color:red">
+                  Solo acepta un tamaño máximo de 20 caracteres</span>
+                <span class="error" ng-show="userForm.folioCNSF.$error.minlength" style="color:red">
+                  Solo acepta de 1 a 20 caracteres</span>
+                <span ng-show="userForm.folioCNSF.$error.pattern" style="color:red">
+                  Ingrese un Folio CNSF válido</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+
+        <div class="row spacio">
+          <div class="col-md-3"></div>
+          <div class="row col-md-7">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <button type="button" ng-click="submitBusqeda()" ng-disabled="userForm.$invalid" class="btn btn-info"><i
+                  class="fa "></i> Buscar</button>
+              <button type="button" class="btn btn-info" ng-click="salir()"><i class="fa fa-reply"></i>
+                Salir</button>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </form>
+
+    </div>
+
+
+
+    <div id="table_clientes" class="div-table" ng-show="tpoliza">
+      <div class="row">
+        <div class="col-lg-10 col-xs-12">
+
+          <div class="ng-table">
+            <table ng-table="tableParams" class="table table-condensed table-bordered table-striped"
+              show-filter="false">
+              <tr *ngFor="let datos of $data">
+                <td title="" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  <input type="checkbox" ng_model="datos.checked" ng-checked="datos.checked" value="{{datos.claveCNFS}}"
+                    ng-click="edit(datos)" />
+                </td>
+
+                <td title="'TIPO DE REPORTE'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  {{datos.tipoReporte}}</td>
+                <td title="'FOLIO'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  {{datos.folioReporte}}</td>
+
+                <td title="'ESTATUS'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  <div ng-if="datos.estatusReporte!=null" *ngFor="let tipo of estatusReporteSelect">
+                    {{tipo.descripcionCNFS}} </div>
+                </td>
+
+                <td title="'FECHA DE GENERACIÓN'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  {{datos.fechaCreacion | date:"yyyy-MM-dd" }}</td>
+
+                <td title="'FOLIO CNSF'" class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn">
+                  {{datos.folioCNSF}}</td>
+              </tr>
+              <tr ng-show="!$data.length">
+                <td colspan=6 class="ng-table-fixedcolumn" header-class="ng-table-fixedcolumn"
+                  style="text-align: center">
+                  No hay Datos</td>
+              </tr>
+            </table>
+            <div class="row div-botones d-flex">
+              <div class="ml-auto p-2  ">
+                <button type="button" class="btn btn-info" ng-click="retorno()"><i class="fa "></i>Regresar
+                </button>
+
+              </div>
+            </div>
+          </div><!--END TABLE -->
+        </div>
+        <div class="col-lg-2 col-xs-12">
+          <div class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" ng-click="consultarReporte()" class="btn btn-info botonLargo"> <i
+                    class="fa fa-search"></i>Consultar</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" ng-click="editarReporte()" class="btn btn-info botonLargo"> <i
+                    class="fa fa-edit"></i>Editar Reporte</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" ng-click="aprobarReporte()" class="btn btn-info botonLargo"><i
+                    class="fa fa-check"></i>Aprobar Reporte</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-1  " style=" padding-left: 8px!important;">
+                <button type="button" ng-click="rechazarReporte()" class="btn btn-info botonLargo"><i
+                    class="fa fa-remove"></i>Rechazar Reporte</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-lg-12 col-xs-12">
+              <div class="ml-auto p-2  ">
+                <button type="button" ng-click="eliminarReporte()" class="btn btn-info botonLargo"><i
+                    class="fa fa-trash"></i>Eliminar Reporte</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+    <div id="processingGeneral" style="display: none">
+      <img class="ajax-loader" src="/resources/img/ajax-loader.gif">
+    </div>
+
+  </div>

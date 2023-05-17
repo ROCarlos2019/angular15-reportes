@@ -19,6 +19,7 @@ import { SeleccionBitacoraComponent } from './components/bitacora/seleccion-bita
 import { ModalComponent } from './shared/modal/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListaCatalogoComponent } from './components/listaCatalogo/lista-catalogo/lista-catalogo.component';
+import { GestorReportesComponent } from './components/gestor/gestor-reportes/gestor-reportes.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ListaCatalogoComponent } from './components/listaCatalogo/lista-catalog
     SeleccionReporteComponent,
     SeleccionBitacoraComponent,
     ModalComponent,
-    ListaCatalogoComponent
+    ListaCatalogoComponent,
+    GestorReportesComponent
   ],
   imports: [
     BrowserModule,
